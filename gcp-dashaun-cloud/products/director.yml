@@ -2,7 +2,7 @@ az-configuration: ((az-configuration))
 iaas-configurations: ((iaas-configurations))
 network-assignment: ((network-assignment))
 networks-configuration: ((networks-configuration))
-properties-configuration: ((properties-configuratin))
+properties-configuration: ((properties-configuration))
 
 resource-configuration:
   compilation:
