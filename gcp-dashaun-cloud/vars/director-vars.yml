@@ -1,4 +1,12 @@
 ---
+# iaas-configuration:
+iaas-configurations:
+- name: gcp-dashaun-cloud
+  associated_service_account: ""
+  auth_json: ((service_account_key))
+  project: ((project))
+  default_deployment_tag: pcf-vms
+
 # az-configuration
 az-configuration: [{name: us-central1-a},{name: us-central1-b},{name: us-central1-c}]
 
@@ -45,22 +53,39 @@ networks-configuration:
             - us-central1-b
             - us-central1-c
 
-properties-configuration_security_configuration_generate_vm_passwords: true
-
 properties-configuration:
   # director-configuration
-  director-configuration:
+  director_configuration:
     blobstore_type: local
+    bosh_recreate_on_next_deploy: false
+    bosh_recreate_persistent_disks_on_next_deploy: false
     database_type: internal
+    director_worker_count: 5
+    encryption:
+      keys: []
+      providers: []
+    hm_emailer_options:
+      enabled: false
+    hm_pager_duty_options:
+      enabled: false
+    identification_tags: {}
+    job_configuration_on_tmpfs: false
+    keep_unreachable_vms: false
+    local_blobstore_options:
+      tls_enabled: true
     ntp_servers_string: metadata.google.internal
-
-# iaas-configuration:
-iaas-configurations:
-- name: gcp-dashaun-cloud
-  associated_service_account: ""
-  auth_json: ((service_account_key))
-  project: ((project))
-  default_deployment_tag: pcf-vms
+    post_deploy_enabled: false
+    resurrector_enabled: false
+    retry_bosh_deploys: false
+    skip_director_drain: false
+    dns_configuration:
+      excluded_recursors: []
+      handlers: []
+    security_configuration:
+      generate_vm_passwords: true
+      opsmanager_root_ca_trusted_certs: false
+    syslog_configuration:
+      enabled: false
 
 # resource-configuration:
 resource-configuration:
