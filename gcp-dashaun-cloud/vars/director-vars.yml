@@ -2,9 +2,14 @@
 # az-configuration
 az_configuration: [{name: us-central1-a},{name: us-central1-b},{name: us-central1-c}]
 
+iaas-configurations:
+  - additional_cloud_properties: {}
+    default_deployment_tag: "platform-automation-deployment"
+    name: "gcp-dashaun-cloud"
+
 # network-assignment
 network-assignment:
-  network: {name: pks-pks-subnet	}
+  network: {name: pks-pks-subnet}
   singleton_availability_zone: {name: us-central1-a}
 
 # networks-configuration
