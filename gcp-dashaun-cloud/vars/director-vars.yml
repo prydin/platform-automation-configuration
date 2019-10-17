@@ -9,6 +9,7 @@ network-assignment:
 
 # networks-configuration
 networks-configuration:
+  icmp_checks_enabled: false
   networks:
     - name: pks-infrastructure-subnet
       subnets:

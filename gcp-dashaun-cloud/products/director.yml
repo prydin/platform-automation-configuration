@@ -1,13 +1,7 @@
-az-configuration: []
-iaas-configurations:
-  - additional_cloud_properties: {}
-    default_deployment_tag: ((iaas-configurations_0_default_deployment_tag))
-    name: ((iaas-configurations_0_name))
-network-assignment:
-  other_availability_zones: []
-networks-configuration:
-  icmp_checks_enabled: false
-  networks: []
+az-configuration: ((az-configuration))
+iaas-configurations: ((iaas-configurations))
+network-assignment: ((network-assignment))
+networks-configuration: ((networks-configuration))
 properties-configuration:
   director_configuration:
     blobstore_type: local
