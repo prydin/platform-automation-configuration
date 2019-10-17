@@ -53,13 +53,13 @@ properties-configuration:
     database_type: internal
     ntp_servers_string: metadata.google.internal
 
-  # iaas-configuration:
-  iaas-configurations:
-  - name: gcp-dashaun-cloud
-    associated_service_account: ""
-    auth_json: ((service_account_key))
-    project: ((project))
-    default_deployment_tag: pcf-vms
+# iaas-configuration:
+iaas-configurations:
+- name: gcp-dashaun-cloud
+  associated_service_account: ""
+  auth_json: ((service_account_key))
+  project: ((project))
+  default_deployment_tag: pcf-vms
 
 # resource-configuration:
 resource-configuration:
