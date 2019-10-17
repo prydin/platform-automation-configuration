@@ -47,22 +47,14 @@ networks-configuration:
             - us-central1-b
             - us-central1-c
 
+properties-configuration_security_configuration_generate_vm_passwords: true
+
 properties-configuration:
   # director-configuration
   director-configuration:
     blobstore_type: local
     database_type: internal
     ntp_servers_string: metadata.google.internal
-
-  # security-configuration:
-  security-configuration:
-    generate_vm_passwords: true
-
-  # iaas-configuration:
-  iaas-configuration:
-    associated_service_account: ""
-    auth_json: ((service_account_key))
-    project: ((project))
 
 # resource-configuration:
 resource-configuration:
