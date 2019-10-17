@@ -2,10 +2,8 @@
 # az-configuration
 az_configuration: [{name: us-central1-a},{name: us-central1-b},{name: us-central1-c}]
 
-iaas-configurations:
-  - additional_cloud_properties: {}
-    default_deployment_tag: "platform-automation-deployment"
-    name: "gcp-dashaun-cloud"
+iaas-configurations_0_default_deployment_tag: "platform-automation-deployment"
+iaas-configurations_0_name: "gcp-dashaun-cloud"
 
 # network-assignment
 network-assignment:
