@@ -2,7 +2,7 @@
 products:
 
   opsman:
-    product-version: "2.6.9"
+    product-version: "2.7.1"
     pivnet-product-slug: ops-manager
     pivnet-api-token: ((pivnet_token))
     pivnet-file-glob: "ops-manager-gcp-*.yml"
