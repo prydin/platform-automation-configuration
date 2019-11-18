@@ -13,7 +13,7 @@ gcp:
   project: ((project))
   region: us-central1
   zone: us-central1-a
-  vm_name:                              # default: OpsManager-vm
+  vm_name: ops-manager-vm               # default: OpsManager-vm
   # For SharedVPC: projects/[HOST_PROJECT_ID]/regions/[REGION]/subnetworks/[SUBNET]
   vpc_subnet: pks-pks-subnet
   tags: ops-manager                     # make sure firewall allow 443/22 for network tag of "ops-manager"
