@@ -12,7 +12,11 @@ products:
     pivnet-product-slug: pivotal-container-service
     pivnet-api-token: ((pivnet_token))
     pivnet-file-glob: "*.pivotal"
-    stemcell-iaas: google
+  pks-stemcell:
+    product-version: "250.73"
+    pivnet-product-slug: stemcells-ubuntu-xenial
+    pivnet-api-token: ((pivnet_token))
+    pivnet-file-glob: "light-bosh-stemcell-*-google-kvm-ubuntu-xenial-go_agent.tgz"
 
   harbor:
     product-version: "1.8.3"
