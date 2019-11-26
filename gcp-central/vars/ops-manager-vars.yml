@@ -12,5 +12,5 @@ gcp:
   custom_cpu: 4                         # default:  8
   custom_memory: 16                     # default: 16
   boot_disk_size: 100                   # default: 400
-  public_ip: ((pks-ops-manager-ip))
-  private_ip: 10.128.10.2
+  public_ip: ((ops_manager_ip))
+  private_ip: ""
