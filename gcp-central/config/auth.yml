@@ -4,12 +4,4 @@
 
 username: ((opsman_admin_username))
 password: ((opsman_admin_password))
-
-# decryption-passphrase is optional,
-# except for use with `import-installation`.
-# OpsMan depends on the passphrase
-# to decrypt the imported installation.
-# For other commands, providing this key allows
-# decryption of the OpsMan VM after reboot,
-# which would otherwise need to be done manually.
-decryption-passphrase: ((decryption_passphrase))
+decryption-passphrase: ""
