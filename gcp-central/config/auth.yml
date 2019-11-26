@@ -4,4 +4,4 @@
 
 username: ((opsman_admin_username))
 password: ((opsman_admin_password))
-decryption-passphrase: ""
+decryption-passphrase: ((decryption_passphrase))
