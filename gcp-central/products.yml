@@ -1,0 +1,8 @@
+---
+products:
+
+  opsman:
+    product-version: "2.6.9"
+    pivnet-product-slug: ops-manager
+    pivnet-api-token: ((pivnet_token))
+    pivnet-file-glob: "ops-manager-gcp-*.yml"

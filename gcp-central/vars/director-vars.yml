@@ -1,0 +1,91 @@
+---
+# iaas-configuration:
+iaas-configurations:
+- name: us-central1
+  associated_service_account: ""
+  auth_json: ((service_account_key))
+  project: ((project))
+  default_deployment_tag: pcf-vms
+
+# az-configuration
+az-configuration: [{name: us-central1-a},{name: us-central1-b},{name: us-central1-c}]
+
+# network-assignment
+network-assignment:
+  network: {name: us-central1-pas-subnet}
+  singleton_availability_zone: {name: us-central1-a}
+
+# networks-configuration
+networks-configuration:
+  icmp_checks_enabled: false
+  networks:
+    - name: us-central1-infrastructure-subnet
+      subnets:
+        - iaas_identifier: us-central1-pcf-network/us-central1-infrastructure-subnet/us-central1
+          cidr: 10.128.0.0/26
+          dns: 169.254.169.254, 8.8.8.8
+          gateway: 10.128.0.1
+          reserved_ip_ranges: 10.128.0.1-10.128.0.9
+          availability_zone_names:
+            - us-central1-a
+            - us-central1-b
+            - us-central1-c
+    - name: us-central1-pas-subnet
+      subnets:
+        - iaas_identifier: us-central1-pcf-network/us-central1-pas-subnet/us-central1
+          cidr: 10.128.4.0/24
+          dns: 169.254.169.254, 8.8.8.8
+          gateway: 10.128.4.1
+          reserved_ip_ranges: 10.128.4.1-10.128.4.9
+          availability_zone_names:
+            - us-central1-a
+            - us-central1-b
+            - us-central1-c
+    - name: us-central1-services-subnet
+      subnets:
+        - iaas_identifier: us-central1-pcf-network/us-central1-services-subnet/us-central1
+          cidr: 10.128.8.0/24
+          dns: 10.128.8.1
+          gateway: 10.128.8.1
+          reserved_ip_ranges: 10.128.8.1-10.128.8.9
+          availability_zone_names:
+            - us-central1-a
+            - us-central1-b
+            - us-central1-c
+
+properties-configuration:
+  # director-configuration
+  director_configuration:
+    blobstore_type: local
+    bosh_recreate_on_next_deploy: false
+    bosh_recreate_persistent_disks_on_next_deploy: false
+    database_type: internal
+    director_worker_count: 5
+    encryption:
+      keys: []
+      providers: []
+    hm_emailer_options:
+      enabled: false
+    hm_pager_duty_options:
+      enabled: false
+    identification_tags: {}
+    job_configuration_on_tmpfs: false
+    keep_unreachable_vms: false
+    local_blobstore_options:
+      tls_enabled: true
+    ntp_servers_string: metadata.google.internal
+    post_deploy_enabled: false
+    resurrector_enabled: false
+    retry_bosh_deploys: false
+    skip_director_drain: false
+    dns_configuration:
+      excluded_recursors: []
+      handlers: []
+    security_configuration:
+      generate_vm_passwords: true
+      opsmanager_root_ca_trusted_certs: false
+    syslog_configuration:
+      enabled: false
+
+# resource-configuration:
+resource-configuration:
