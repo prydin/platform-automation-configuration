@@ -2,7 +2,7 @@
 ---
 
 gcp:
-  gcp_service_account: ((service_account_key))
+  gcp_service_account: ((gcp_credentials_json))
   project: ((project))
   region: us-central1
   zone: us-central1-a
