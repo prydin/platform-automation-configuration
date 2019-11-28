@@ -1,1 +1,7 @@
 ---
+properties_credhub_key_encryption_passwords_0_key:
+  secret: ((properties_credhub_key_encryption_passwords_0_key.secret))
+
+properties_networking_poe_ssl_certs_0_certificate:
+  cert_pem: ((properties_networking_poe_ssl_certs_0_certificate.certificate))
+  private_key_pem: ((properties_networking_poe_ssl_certs_0_certificate.private_key))
