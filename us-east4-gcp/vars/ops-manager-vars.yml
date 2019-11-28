@@ -1,0 +1,16 @@
+
+---
+
+gcp:
+  gcp_service_account: ((gcp_credentials_json))
+  project: ((project))
+  region: us-east4
+  zone: us-east4-a
+  vm_name: ops-manager-vm               # default: OpsManager-vm
+  vpc_subnet: us-east4-pas-subnet
+  tags: us-east4-ops-manager-external # make sure firewall allow 443/22 for network tag of "ops-manager"
+  custom_cpu: 4                         # default:  8
+  custom_memory: 16                     # default: 16
+  boot_disk_size: 100                   # default: 400
+  public_ip: ((ops_manager_ip))
+  private_ip: ""

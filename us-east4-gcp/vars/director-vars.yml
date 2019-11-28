@@ -1,57 +1,57 @@
 ---
 # iaas-configuration:
 iaas-configurations:
-- name: us-central1
+- name: us-east4
   associated_service_account: ""
   auth_json: ((gcp_credentials_json))
   project: ((project))
   default_deployment_tag: pcf-vms
 
 # az-configuration
-az-configuration: [{name: us-central1-a},{name: us-central1-b},{name: us-central1-c}]
+az-configuration: [{name: us-east4-a},{name: us-east4-b},{name: us-east4-c}]
 
 # network-assignment
 network-assignment:
-  network: {name: us-central1-pas-subnet}
-  singleton_availability_zone: {name: us-central1-a}
+  network: {name: us-east4-pas-subnet}
+  singleton_availability_zone: {name: us-east4-a}
 
 # networks-configuration
 networks-configuration:
   icmp_checks_enabled: false
   networks:
-    - name: us-central1-infrastructure-subnet
+    - name: us-east4-infrastructure-subnet
       subnets:
-        - iaas_identifier: us-central1-pcf-network/us-central1-infrastructure-subnet/us-central1
-          cidr: 10.128.0.0/26
+        - iaas_identifier: us-east4-pcf-network/us-east4-infrastructure-subnet/us-east4
+          cidr: 10.150.0.0/26
           dns: 169.254.169.254, 8.8.8.8
-          gateway: 10.128.0.1
-          reserved_ip_ranges: 10.128.0.1-10.128.0.9
+          gateway: 10.150.0.1
+          reserved_ip_ranges: 10.150.0.1-10.150.0.9
           availability_zone_names:
-            - us-central1-a
-            - us-central1-b
-            - us-central1-c
-    - name: us-central1-pas-subnet
+            - us-east4-a
+            - us-east4-b
+            - us-east4-c
+    - name: us-east4-pas-subnet
       subnets:
-        - iaas_identifier: us-central1-pcf-network/us-central1-pas-subnet/us-central1
-          cidr: 10.128.4.0/24
+        - iaas_identifier: us-east4-pcf-network/us-east4-pas-subnet/us-east4
+          cidr: 10.150.4.0/24
           dns: 169.254.169.254, 8.8.8.8
-          gateway: 10.128.4.1
-          reserved_ip_ranges: 10.128.4.1-10.128.4.9
+          gateway: 10.150.4.1
+          reserved_ip_ranges: 10.150.4.1-10.150.4.9
           availability_zone_names:
-            - us-central1-a
-            - us-central1-b
-            - us-central1-c
-    - name: us-central1-services-subnet
+            - us-east4-a
+            - us-east4-b
+            - us-east4-c
+    - name: us-east4-services-subnet
       subnets:
-        - iaas_identifier: us-central1-pcf-network/us-central1-services-subnet/us-central1
-          cidr: 10.128.8.0/24
-          dns: 10.128.8.1
-          gateway: 10.128.8.1
-          reserved_ip_ranges: 10.128.8.1-10.128.8.9
+        - iaas_identifier: us-east4-pcf-network/us-east4-services-subnet/us-east4
+          cidr: 10.150.8.0/24
+          dns: 10.150.8.1
+          gateway: 10.150.8.1
+          reserved_ip_ranges: 10.150.8.1-10.150.8.9
           availability_zone_names:
-            - us-central1-a
-            - us-central1-b
-            - us-central1-c
+            - us-east4-a
+            - us-east4-b
+            - us-east4-c
 
 properties-configuration:
   # director-configuration
