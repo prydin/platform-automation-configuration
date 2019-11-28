@@ -1,13 +1,13 @@
 az-configuration:
 - name: us-central1-c
   iaas_configuration_name: us-central1
-  guid: d60fbb956f02e727a560
+  guid: 2977f8f2975338c7f99d
 - name: us-central1-b
   iaas_configuration_name: us-central1
-  guid: 9f520a974bd4fda49cf1
+  guid: d8a2e7a8d9c11d85ca90
 - name: us-central1-a
   iaas_configuration_name: us-central1
-  guid: e8dcf0a23d61dd28bfd6
+  guid: 401059e8387c1207bbac
 iaas-configurations:
 - additional_cloud_properties: {}
   default_deployment_tag: ((iaas-configurations_0_default_deployment_tag))
