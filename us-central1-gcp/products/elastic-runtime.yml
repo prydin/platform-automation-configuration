@@ -469,7 +469,6 @@ resource-config:
     additional_vm_extensions: []
     elb_names:
     - tcp:us-central1-cf-tcp
-    - http:us-central1-tcplb
     instance_type:
       id: automatic
     instances: automatic
