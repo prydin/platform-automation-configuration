@@ -1,20 +1,67 @@
-az-configuration: []
+az-configuration:
+- name: us-east4-c
+  iaas_configuration_name: us-east4
+  guid: e4278420aa30cd629391
+- name: us-east4-b
+  iaas_configuration_name: us-east4
+  guid: b23a94d50ecf1b782b34
+- name: us-east4-a
+  iaas_configuration_name: us-east4
+  guid: b9521ef226cd34d75277
 iaas-configurations:
 - additional_cloud_properties: {}
   default_deployment_tag: ((iaas-configurations_0_default_deployment_tag))
   name: ((iaas-configurations_0_name))
+  project: ((iaas-configurations_0_project))
 network-assignment:
+  network:
+    name: us-east4-pas-subnet
   other_availability_zones: []
+  singleton_availability_zone:
+    name: us-east4-a
 networks-configuration:
   icmp_checks_enabled: false
-  networks: []
+  networks:
+  - name: us-east4-infrastructure-subnet
+    subnets:
+    - iaas_identifier: us-east4-pcf-network/us-east4-infrastructure-subnet/us-east4
+      cidr: 10.150.0.0/26
+      dns: 169.254.169.254, 8.8.8.8
+      gateway: 10.150.0.1
+      reserved_ip_ranges: 10.150.0.1-10.150.0.9
+      availability_zone_names:
+      - us-east4-a
+      - us-east4-b
+      - us-east4-c
+  - name: us-east4-pas-subnet
+    subnets:
+    - iaas_identifier: us-east4-pcf-network/us-east4-pas-subnet/us-east4
+      cidr: 10.150.4.0/24
+      dns: 169.254.169.254, 8.8.8.8
+      gateway: 10.150.4.1
+      reserved_ip_ranges: 10.150.4.1-10.150.4.9
+      availability_zone_names:
+      - us-east4-a
+      - us-east4-b
+      - us-east4-c
+  - name: us-east4-services-subnet
+    subnets:
+    - iaas_identifier: us-east4-pcf-network/us-east4-services-subnet/us-east4
+      cidr: 10.150.8.0/24
+      dns: 10.150.8.1
+      gateway: 10.150.8.1
+      reserved_ip_ranges: 10.150.8.1-10.150.8.9
+      availability_zone_names:
+      - us-east4-a
+      - us-east4-b
+      - us-east4-c
 properties-configuration:
   director_configuration:
     blobstore_type: local
     bosh_recreate_on_next_deploy: false
     bosh_recreate_persistent_disks_on_next_deploy: false
     database_type: internal
-    director_worker_count: 5
+    director_worker_count: 8
     encryption:
       keys: []
       providers: []
@@ -27,7 +74,7 @@ properties-configuration:
     keep_unreachable_vms: false
     local_blobstore_options:
       tls_enabled: true
-    ntp_servers_string: ""
+    ntp_servers_string: metadata.google.internal
     post_deploy_enabled: false
     resurrector_enabled: false
     retry_bosh_deploys: false
