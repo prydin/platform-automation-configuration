@@ -46,20 +46,6 @@ product-properties:
       plan_backup_type: disabled
       plan_backup_url: null
       plan_interval: "3600"
-    - plan_backup_s3_access_key: null
-      plan_backup_s3_bucket_name: null
-      plan_backup_s3_key_id: null
-      plan_backup_s3_subdir: null
-      plan_backup_type: disabled
-      plan_backup_url: null
-      plan_interval: "14400"
-    - plan_backup_s3_access_key: null
-      plan_backup_s3_bucket_name: null
-      plan_backup_s3_key_id: null
-      plan_backup_s3_subdir: null
-      plan_backup_type: disabled
-      plan_backup_url: null
-      plan_interval: "3600"
   .properties.redis_tcp_routing:
     selected_option: enabled
     value: Enabled
