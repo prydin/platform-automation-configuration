@@ -1,0 +1,188 @@
+product-name: redis-enterprise
+product-properties:
+  .properties.allow_paid_service_plans:
+    value: false
+  .properties.api_certs:
+    value:
+      cert_pem: ((properties_api_certs.cert_pem))
+      private_key_pem: ((properties_api_certs.private_key_pem))
+  .properties.apply_open_security_group:
+    value: true
+  .properties.expose_metrics_exporter:
+    value: false
+  .properties.org:
+    value: redis-enterprise-org
+  .properties.proxy_certs:
+    value:
+      cert_pem: ((properties_proxy_certs.cert_pem))
+      private_key_pem: ((properties_proxy_certs.private_key_pem))
+  .properties.rack_aware:
+    value: false
+  .properties.recovery_mode:
+    value: false
+  .properties.redis_api_domain:
+    value: api-redis
+  .properties.redis_broker_domain:
+    value: broker-redis
+  .properties.redis_console_domain:
+    value: console-redis
+  .properties.redis_metrics_domain:
+    value: metrics-redis
+  .properties.redis_plans:
+    value:
+    - plan_backup_s3_access_key: null
+      plan_backup_s3_bucket_name: null
+      plan_backup_s3_key_id: null
+      plan_backup_s3_subdir: null
+      plan_backup_type: disabled
+      plan_backup_url: null
+      plan_interval: 0
+    - plan_backup_s3_access_key: null
+      plan_backup_s3_bucket_name: null
+      plan_backup_s3_key_id: null
+      plan_backup_s3_subdir: null
+      plan_backup_type: disabled
+      plan_backup_url: null
+      plan_interval: 0
+    - plan_backup_s3_access_key: null
+      plan_backup_s3_bucket_name: null
+      plan_backup_s3_key_id: null
+      plan_backup_s3_subdir: null
+      plan_backup_type: disabled
+      plan_backup_url: null
+      plan_interval: 14400
+    - plan_backup_s3_access_key: null
+      plan_backup_s3_bucket_name: null
+      plan_backup_s3_key_id: null
+      plan_backup_s3_subdir: null
+      plan_backup_type: disabled
+      plan_backup_url: null
+      plan_interval: 0
+  .properties.redis_tcp_routing:
+    selected_option: enabled
+    value: Enabled
+  .properties.redis_tcp_routing.enabled.redis_port_range_max:
+    value: 1100
+  .properties.redis_tcp_routing.enabled.redis_port_range_min:
+    value: 1030
+  .properties.redis_tcp_routing.enabled.redis_router_group:
+    value: default-tcp
+  .properties.redis_tcp_routing.enabled.redis_routing_client_secret:
+    value:
+      secret: ((properties_redis_tcp_routing_enabled_redis_routing_client_secret.secret))
+  .properties.redis_tcp_routing.enabled.redis_sentinel_port:
+    value: 1120
+  .properties.rlec_password:
+    value:
+      secret: ((properties_rlec_password.secret))
+  .properties.scrape_interval:
+    value: 15
+  .properties.space:
+    value: redis-enterprise-space
+  .properties.syslog_enabled:
+    value: true
+  .properties.syslog_tls_enabled:
+    value: false
+  .properties.syslog_transport:
+    value: tcp
+network-properties:
+  network: null
+  other_availability_zones: []
+  singleton_availability_zone: null
+resource-config:
+  broker_deregistrar:
+    max_in_flight: 1
+    additional_networks: []
+    additional_vm_extensions: []
+    elb_names: []
+    instance_type:
+      id: automatic
+    instances: automatic
+    internet_connected: true
+    swap_as_percent_of_memory_size: automatic
+  broker_registrar:
+    max_in_flight: 1
+    additional_networks: []
+    additional_vm_extensions: []
+    elb_names: []
+    instance_type:
+      id: automatic
+    instances: automatic
+    internet_connected: true
+    swap_as_percent_of_memory_size: automatic
+  loggregator-agent:
+    max_in_flight: 1
+    additional_networks: []
+    additional_vm_extensions: []
+    elb_names: []
+    instance_type:
+      id: automatic
+    instances: automatic
+    internet_connected: true
+    swap_as_percent_of_memory_size: automatic
+  redis-enterprise-node:
+    max_in_flight: 1
+    additional_networks: []
+    additional_vm_extensions: []
+    elb_names: []
+    instance_type:
+      id: automatic
+    instances: automatic
+    internet_connected: true
+    persistent_disk:
+      size_mb: automatic
+    swap_as_percent_of_memory_size: automatic
+  redis-registrar:
+    max_in_flight: 1
+    additional_networks: []
+    additional_vm_extensions: []
+    elb_names: []
+    instance_type:
+      id: automatic
+    instances: automatic
+    internet_connected: true
+    persistent_disk:
+      size_mb: automatic
+    swap_as_percent_of_memory_size: automatic
+  redis_enterprise_cluster_configurator:
+    max_in_flight: 1
+    additional_networks: []
+    additional_vm_extensions: []
+    elb_names: []
+    instance_type:
+      id: automatic
+    instances: automatic
+    internet_connected: true
+    swap_as_percent_of_memory_size: automatic
+  redis_enterprise_smoke_test:
+    max_in_flight: 1
+    additional_networks: []
+    additional_vm_extensions: []
+    elb_names: []
+    instance_type:
+      id: automatic
+    instances: automatic
+    internet_connected: true
+    swap_as_percent_of_memory_size: automatic
+  redislabs_service_broker:
+    max_in_flight: 1
+    additional_networks: []
+    additional_vm_extensions: []
+    elb_names: []
+    instance_type:
+      id: automatic
+    instances: automatic
+    internet_connected: true
+    persistent_disk:
+      size_mb: automatic
+    swap_as_percent_of_memory_size: automatic
+errand-config:
+  broker_deregistrar:
+    pre-delete-state: true
+  broker_registrar:
+    post-deploy-state: true
+  redis_enterprise_cluster_configurator:
+    post-deploy-state: true
+  redis_enterprise_smoke_test:
+    post-deploy-state: true
+
