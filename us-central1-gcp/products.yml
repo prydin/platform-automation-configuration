@@ -19,3 +19,15 @@ products:
     pivnet-product-slug: stemcells-ubuntu-xenial
     pivnet-api-token: ((pivnet_token))
     pivnet-file-glob: "light-bosh-stemcell-*-google-kvm-ubuntu-xenial-go_agent.tgz"
+
+  redis-enterprise:
+    product-version: 5.4.40700169
+    pivnet-product-slug: redis-enterprise-pack
+    pivnet-api-token: ((pivnet_token))
+    pivnet-file-glob: "redis-enterprise-*.pivotal"
+    stemcell-iaas: google
+  redis-enterprise-stemcell:
+    product-version: "250.159"
+    pivnet-product-slug: stemcells-ubuntu-xenial
+    pivnet-api-token: ((pivnet_token))
+    pivnet-file-glob: "light-bosh-stemcell-*-google-kvm-ubuntu-xenial-go_agent.tgz"
