@@ -1,67 +1,20 @@
-az-configuration:
-- name: us-central1-c
-  iaas_configuration_name: us-central1
-  guid: 742bff73103190238a50
-- name: us-central1-b
-  iaas_configuration_name: us-central1
-  guid: 0c391b28437ef5496018
-- name: us-central1-a
-  iaas_configuration_name: us-central1
-  guid: 9c89e924783d1f5760cb
+az-configuration: []
 iaas-configurations:
 - additional_cloud_properties: {}
   default_deployment_tag: ((iaas-configurations_0_default_deployment_tag))
   name: ((iaas-configurations_0_name))
-  project: ((iaas-configurations_0_project))
 network-assignment:
-  network:
-    name: us-central1-pas-subnet
   other_availability_zones: []
-  singleton_availability_zone:
-    name: us-central1-a
 networks-configuration:
   icmp_checks_enabled: false
-  networks:
-  - name: us-central1-infrastructure-subnet
-    subnets:
-    - iaas_identifier: us-central1-pcf-network/us-central1-infrastructure-subnet/us-central1
-      cidr: 10.128.0.0/26
-      dns: 169.254.169.254, 8.8.8.8
-      gateway: 10.128.0.1
-      reserved_ip_ranges: 10.128.0.1-10.128.0.9
-      availability_zone_names:
-      - us-central1-a
-      - us-central1-b
-      - us-central1-c
-  - name: us-central1-pas-subnet
-    subnets:
-    - iaas_identifier: us-central1-pcf-network/us-central1-pas-subnet/us-central1
-      cidr: 10.128.4.0/24
-      dns: 169.254.169.254, 8.8.8.8
-      gateway: 10.128.4.1
-      reserved_ip_ranges: 10.128.4.1-10.128.4.9
-      availability_zone_names:
-      - us-central1-a
-      - us-central1-b
-      - us-central1-c
-  - name: us-central1-services-subnet
-    subnets:
-    - iaas_identifier: us-central1-pcf-network/us-central1-services-subnet/us-central1
-      cidr: 10.128.8.0/24
-      dns: 10.128.8.1
-      gateway: 10.128.8.1
-      reserved_ip_ranges: 10.128.8.1-10.128.8.9
-      availability_zone_names:
-      - us-central1-a
-      - us-central1-b
-      - us-central1-c
+  networks: []
 properties-configuration:
   director_configuration:
     blobstore_type: local
     bosh_recreate_on_next_deploy: false
     bosh_recreate_persistent_disks_on_next_deploy: false
     database_type: internal
-    director_worker_count: 8
+    director_worker_count: 5
     encryption:
       keys: []
       providers: []
@@ -74,7 +27,7 @@ properties-configuration:
     keep_unreachable_vms: false
     local_blobstore_options:
       tls_enabled: true
-    ntp_servers_string: metadata.google.internal
+    ntp_servers_string: ""
     post_deploy_enabled: false
     resurrector_enabled: false
     retry_bosh_deploys: false
