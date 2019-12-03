@@ -6,7 +6,7 @@ gcp:
   project: ((project))
   region: us-east4
   zone: us-east4-a
-  vm_name: ops-manager-vm               # default: OpsManager-vm
+  vm_name: ops-manager-vm-us-east4               # default: OpsManager-vm
   vpc_subnet: us-east4-pas-subnet
   tags: us-east4-ops-manager-external # make sure firewall allow 443/22 for network tag of "ops-manager"
   custom_cpu: 4                         # default:  8
