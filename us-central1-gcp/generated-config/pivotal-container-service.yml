@@ -49,14 +49,20 @@ product-properties:
   .properties.pks-vrops:
     selected_option: disabled
     value: disabled
+  .properties.pks_api_hostname:
+    value: api.pks.us-central1.gcp.dashaun.cloud
   .properties.plan1_selector:
     selected_option: active
     value: Plan Active
+  .properties.plan1_selector.active.admission_plugins:
+    value: []
   .properties.plan1_selector.active.allow_privileged_containers:
     value: false
   .properties.plan1_selector.active.description:
     value: 'Example: This plan will configure a lightweight kubernetes cluster. Not
       recommended for production workloads.'
+  .properties.plan1_selector.active.errand_vm_type:
+    value: medium
   .properties.plan1_selector.active.kubelet_drain_delete_local_data:
     value: true
   .properties.plan1_selector.active.kubelet_drain_force:
@@ -69,12 +75,22 @@ product-properties:
     value: true
   .properties.plan1_selector.active.kubelet_drain_timeout:
     value: 0
+  .properties.plan1_selector.active.master_az_placement:
+    value:
+    - us-central1-a
+    - us-central1-b
+    - us-central1-c
   .properties.plan1_selector.active.master_instances:
     value: 1
   .properties.plan1_selector.active.max_worker_instances:
     value: 50
   .properties.plan1_selector.active.name:
     value: small
+  .properties.plan1_selector.active.worker_az_placement:
+    value:
+    - us-central1-a
+    - us-central1-b
+    - us-central1-c
   .properties.plan1_selector.active.worker_instances:
     value: 3
   .properties.plan2_selector:
@@ -148,12 +164,18 @@ product-properties:
     selected_option: disabled
     value: disabled
   .properties.worker_max_in_flight:
-    value: 4
+    value: 7
 network-properties:
-  network: null
-  other_availability_zones: []
-  service_network: null
-  singleton_availability_zone: null
+  network:
+    name: us-central1-pas-subnet
+  other_availability_zones:
+  - name: us-central1-c
+  - name: us-central1-b
+  - name: us-central1-a
+  service_network:
+    name: us-central1-services-subnet
+  singleton_availability_zone:
+    name: us-central1-a
 resource-config:
   pivotal-container-service:
     max_in_flight: 1
