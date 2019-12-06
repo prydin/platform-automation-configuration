@@ -86,9 +86,8 @@ product-properties:
     value: 120
   .properties.cf_networking_enable_space_developer_self_service:
     value: false
-  .properties.cf_networking_internal_domains:
-    value:
-    - name: apps.internal
+  .properties.cf_networking_internal_domain:
+    value: apps.internal
   .properties.cloud_controller_completed_tasks_cutoff_age_in_days:
     value: 31
   .properties.cloud_controller_default_health_check_timeout:
@@ -125,10 +124,7 @@ product-properties:
 #      secret: ((properties_credhub_hsm_provider_partition_password.secret))
   .properties.credhub_internal_provider_keys:
     value:
-    - key:
-        secret: ((properties_credhub_internal_provider_keys_0_key.secret))
-      name: credhubInternalEncryptionProviderKey
-      primary: true
+      secret: ((properties_credhub_hsm_provider_partition_password.secret))
   .properties.diego_database_max_open_connections:
     value: 100
   .properties.diego_log_timestamp_format:
@@ -140,8 +136,6 @@ product-properties:
     value: false
   .properties.enable_tls_to_internal_pxc:
     value: false
-  .properties.enable_v1_firehose:
-    value: true
   .properties.experimental_dynamic_egress_enforcement:
     value: false
   .properties.garden_disk_cleanup:
@@ -206,12 +200,6 @@ product-properties:
     value: false
   .properties.push_apps_manager_enable_invitations:
     value: true
-  .properties.push_apps_manager_nav_links:
-    value:
-    - href: https://docs.pivotal.io/pivotalcf/2-7/pas/intro.html
-      name: Docs
-    - href: /tools
-      name: Tools
   .properties.push_apps_manager_poll_interval:
     value: 30
   .properties.route_integrity:
@@ -237,6 +225,8 @@ product-properties:
   .properties.router_keepalive_connections:
     selected_option: enable
     value: enable
+  .properties.router_prune_all_stale_routes:
+    value: false
   .properties.routing_disable_http:
     value: false
   .properties.routing_log_client_ips:
@@ -275,6 +265,8 @@ product-properties:
     value: 587
   .properties.syslog_drop_debug:
     value: true
+  .properties.syslog_metrics_to_syslog_enabled:
+    value: true
   .properties.syslog_tls:
     selected_option: disabled
     value: disabled
@@ -283,9 +275,6 @@ product-properties:
   .properties.system_blobstore:
     selected_option: internal
     value: internal
-  .properties.system_blobstore_backup_level:
-    selected_option: all
-    value: all
   .properties.system_blobstore_ccdroplet_max_staged_droplets_stored:
     value: 2
   .properties.system_blobstore_ccpackage_max_valid_packages_stored:
