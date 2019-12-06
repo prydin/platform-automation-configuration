@@ -22,10 +22,10 @@ networks-configuration:
     - name: us-west1-infrastructure-subnet
       subnets:
         - iaas_identifier: us-west1-pcf-network/us-west1-infrastructure-subnet/us-west1
-          cidr: 10.150.0.0/26
+          cidr: 10.138.0.0/26
           dns: 169.254.169.254, 8.8.8.8
-          gateway: 10.150.0.1
-          reserved_ip_ranges: 10.150.0.1-10.150.0.9
+          gateway: 10.138.0.1
+          reserved_ip_ranges: 10.138.0.1-10.138.0.9
           availability_zone_names:
             - us-west1-a
             - us-west1-b
@@ -33,10 +33,10 @@ networks-configuration:
     - name: us-west1-pas-subnet
       subnets:
         - iaas_identifier: us-west1-pcf-network/us-west1-pas-subnet/us-west1
-          cidr: 10.150.4.0/24
+          cidr: 10.138.4.0/24
           dns: 169.254.169.254, 8.8.8.8
-          gateway: 10.150.4.1
-          reserved_ip_ranges: 10.150.4.1-10.150.4.9
+          gateway: 10.138.4.1
+          reserved_ip_ranges: 10.138.4.1-10.138.4.9
           availability_zone_names:
             - us-west1-a
             - us-west1-b
@@ -44,10 +44,10 @@ networks-configuration:
     - name: us-west1-services-subnet
       subnets:
         - iaas_identifier: us-west1-pcf-network/us-west1-services-subnet/us-west1
-          cidr: 10.150.8.0/24
-          dns: 10.150.8.1
-          gateway: 10.150.8.1
-          reserved_ip_ranges: 10.150.8.1-10.150.8.9
+          cidr: 10.138.8.0/24
+          dns: 10.138.8.1
+          gateway: 10.138.8.1
+          reserved_ip_ranges: 10.138.8.1-10.138.8.9
           availability_zone_names:
             - us-west1-a
             - us-west1-b
