@@ -125,10 +125,10 @@ product-properties:
 #      secret: ((properties_credhub_hsm_provider_partition_password.secret))
   .properties.credhub_internal_provider_keys:
     value:
-      - key:
-          secret: ((properties_credhub_internal_provider_keys_0_key.secret))
-        name: credhubInternalEncryptionProviderKey
-        primary: true
+    - key:
+        secret: ((properties_credhub_internal_provider_keys_0_key.secret))
+      name: credhubInternalEncryptionProviderKey
+      primary: true
   .properties.diego_database_max_open_connections:
     value: 100
   .properties.diego_log_timestamp_format:
@@ -237,8 +237,6 @@ product-properties:
   .properties.router_keepalive_connections:
     selected_option: enable
     value: enable
-  .properties.router_prune_all_stale_routes:
-    value: false
   .properties.routing_disable_http:
     value: false
   .properties.routing_log_client_ips:
@@ -269,11 +267,7 @@ product-properties:
 #      password: ((properties_smtp_credentials.password))
   .properties.smtp_enable_starttls_auto:
     value: false
-  .properties.syslog_agent_enabled:
-    value: false
   .properties.syslog_drop_debug:
-    value: true
-  .properties.syslog_metrics_to_syslog_enabled:
     value: true
   .properties.syslog_tls:
     selected_option: disabled
