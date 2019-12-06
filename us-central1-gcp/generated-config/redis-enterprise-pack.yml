@@ -8,10 +8,8 @@ product-properties:
       private_key_pem: ((properties_api_certs.private_key_pem))
   .properties.apply_open_security_group:
     value: true
-  .properties.cluster_name:
-    value: redis.us-central1.gcp.dashaun.cloud
   .properties.expose_metrics_exporter:
-    value: true
+    value: false
   .properties.org:
     value: redis-enterprise-org
   .properties.proxy_certs:
@@ -19,7 +17,7 @@ product-properties:
       cert_pem: ((properties_proxy_certs.cert_pem))
       private_key_pem: ((properties_proxy_certs.private_key_pem))
   .properties.rack_aware:
-    value: true
+    value: false
   .properties.recovery_mode:
     value: false
   .properties.redis_api_domain:
@@ -38,27 +36,37 @@ product-properties:
       plan_backup_s3_subdir: null
       plan_backup_type: disabled
       plan_backup_url: null
-      plan_interval: "3600"
+      plan_interval: 0
     - plan_backup_s3_access_key: null
       plan_backup_s3_bucket_name: null
       plan_backup_s3_key_id: null
       plan_backup_s3_subdir: null
       plan_backup_type: disabled
       plan_backup_url: null
-      plan_interval: "3600"
+      plan_interval: 0
+    - plan_backup_s3_access_key: null
+      plan_backup_s3_bucket_name: null
+      plan_backup_s3_key_id: null
+      plan_backup_s3_subdir: null
+      plan_backup_type: disabled
+      plan_backup_url: null
+      plan_interval: 14400
+    - plan_backup_s3_access_key: null
+      plan_backup_s3_bucket_name: null
+      plan_backup_s3_key_id: null
+      plan_backup_s3_subdir: null
+      plan_backup_type: disabled
+      plan_backup_url: null
+      plan_interval: 0
   .properties.redis_tcp_routing:
     selected_option: enabled
     value: Enabled
-  .properties.redis_tcp_routing.enabled.redis_domain:
-    value: tcp.redis.us-central1.gcp.dashaun.cloud
   .properties.redis_tcp_routing.enabled.redis_port_range_max:
     value: 1100
   .properties.redis_tcp_routing.enabled.redis_port_range_min:
     value: 1030
   .properties.redis_tcp_routing.enabled.redis_router_group:
     value: default-tcp
-  .properties.redis_tcp_routing.enabled.redis_routing_client_id:
-    value: redis-enterprise
   .properties.redis_tcp_routing.enabled.redis_routing_client_secret:
     value:
       secret: ((properties_redis_tcp_routing_enabled_redis_routing_client_secret.secret))
@@ -67,8 +75,6 @@ product-properties:
   .properties.rlec_password:
     value:
       secret: ((properties_rlec_password.secret))
-  .properties.rlec_username:
-    value: dacarter@pivotal.io
   .properties.scrape_interval:
     value: 15
   .properties.space:
@@ -80,14 +86,9 @@ product-properties:
   .properties.syslog_transport:
     value: tcp
 network-properties:
-  network:
-    name: us-central1-services-subnet
-  other_availability_zones:
-  - name: us-central1-c
-  - name: us-central1-b
-  - name: us-central1-a
-  singleton_availability_zone:
-    name: us-central1-a
+  network: null
+  other_availability_zones: []
+  singleton_availability_zone: null
 resource-config:
   broker_deregistrar:
     max_in_flight: 1
