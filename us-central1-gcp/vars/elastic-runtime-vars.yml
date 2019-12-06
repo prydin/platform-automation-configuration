@@ -8,3 +8,7 @@ properties_networking_poe_ssl_certs_0_certificate:
 
 uaa_service_provider_key_password:
   secret: ((uaa_service_provider_key_password))
+
+properties_smtp_credentials:
+  identity: apikey
+  password: ((smtp_credentials.password))

@@ -184,10 +184,10 @@ product-properties:
     value: connect,query
   .properties.networking_poe_ssl_certs:
     value:
-      - certificate:
-          cert_pem: ((properties_networking_poe_ssl_certs_0_certificate.cert_pem))
-          private_key_pem: ((properties_networking_poe_ssl_certs_0_certificate.private_key_pem))
-        name: apps sys and pcf
+    - certificate:
+        cert_pem: ((properties_networking_poe_ssl_certs_0_certificate.cert_pem))
+        private_key_pem: ((properties_networking_poe_ssl_certs_0_certificate.private_key_pem))
+      name: apps sys and pcf
   .properties.networkpolicyserver_database_max_open_connections:
     value: 200
   .properties.networkpolicyserverinternal_database_max_open_connections:
@@ -259,14 +259,20 @@ product-properties:
   .properties.smoke_tests:
     selected_option: on_demand
     value: on_demand
+  .properties.smtp_address:
+    value: smtp.sendgrid.net
   .properties.smtp_auth_mechanism:
     value: plain
-#  .properties.smtp_credentials:
-#    value:
-#      identity: ((properties_smtp_credentials.identity))
-#      password: ((properties_smtp_credentials.password))
+  .properties.smtp_credentials:
+    value:
+      identity: ((properties_smtp_credentials.identity))
+      password: ((properties_smtp_credentials.password))
   .properties.smtp_enable_starttls_auto:
-    value: false
+    value: true
+  .properties.smtp_from:
+    value: dashaun@gmail.com
+  .properties.smtp_port:
+    value: 587
   .properties.syslog_drop_debug:
     value: true
   .properties.syslog_tls:
@@ -355,9 +361,9 @@ network-properties:
   network:
     name: us-central1-pas-subnet
   other_availability_zones:
-    - name: us-central1-c
-    - name: us-central1-b
-    - name: us-central1-a
+  - name: us-central1-c
+  - name: us-central1-b
+  - name: us-central1-a
   singleton_availability_zone:
     name: us-central1-a
 resource-config:
