@@ -123,13 +123,12 @@ product-properties:
 #  .properties.credhub_hsm_provider_partition_password:
 #    value:
 #      secret: ((properties_credhub_hsm_provider_partition_password.secret))
-  .properties.credhub_key_encryption_passwords:
+  .properties.credhub_internal_provider_keys:
     value:
       - key:
-          secret: ((properties_credhub_key_encryption_passwords_0_key.secret))
-        name: generated
+          secret: ((properties_credhub_internal_provider_keys_0_key.secret))
+        name: credhubInternalEncryptionProviderKey
         primary: true
-        provider: internal
   .properties.diego_database_max_open_connections:
     value: 100
   .properties.diego_log_timestamp_format:
