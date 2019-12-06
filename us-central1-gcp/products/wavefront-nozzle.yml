@@ -13,13 +13,13 @@ product-properties:
     selected_option: default
     value: Default
   .properties.custom_tag_foundation:
-    value: us-east4-gcp
+    value: us-central1-gcp
   .properties.friendly_hostname:
-    value: us-east4-pcf-proxy
+    value: us-central1-pcf-proxy
   .properties.org:
     value: wavefront-nozzle-org
   .properties.pcf_host:
-    value: api.sys.us-east4.gcp.dashaun.cloud
+    value: api.sys.us-central1.gcp.dashaun.cloud
   .properties.pcf_password:
     value:
       secret: ((properties_wavefront_user.password))
@@ -37,13 +37,13 @@ product-properties:
     value: https://surf.wavefront.com/api
 network-properties:
   network:
-    name: us-east4-services-subnet
+    name: us-central1-services-subnet
   other_availability_zones:
-  - name: us-east4-c
-  - name: us-east4-b
-  - name: us-east4-a
+  - name: us-central1-c
+  - name: us-central1-b
+  - name: us-central1-a
   singleton_availability_zone:
-    name: us-east4-a
+    name: us-central1-a
 resource-config:
   delete-all:
     max_in_flight: 1
