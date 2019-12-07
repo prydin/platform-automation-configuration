@@ -488,7 +488,8 @@ resource-config:
     max_in_flight: 1
     additional_networks: []
     additional_vm_extensions: []
-    elb_names: []
+    elb_names:
+    - tcp:us-central1-cf-tcp
     instance_type:
       id: automatic
     instances: automatic
