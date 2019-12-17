@@ -3,7 +3,7 @@
 #Operations Manager Version 2.7.6
 aws:
   region: us-west-2
-  vpc_subnet_id: vpc-0e3e7c9b80e9cf2b0
+  vpc_subnet_id: subnet-0122c54ab36a26857 #Choose one of the management subnet IDs
   security_group_ids:
   - sg-0c6fca0c6a45fa539
 
