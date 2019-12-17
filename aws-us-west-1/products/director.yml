@@ -1,0 +1,21 @@
+az-configuration: ((az-configuration))
+iaas-configurations: ((iaas-configurations))
+network-assignment: ((network-assignment))
+networks-configuration: ((networks-configuration))
+properties-configuration: ((properties-configuration))
+
+resource-configuration:
+  compilation:
+    instances: automatic
+    instance_type:
+      id: automatic
+    internet_connected: true
+  director:
+    instances: automatic
+    persistent_disk:
+      size_mb: automatic
+    instance_type:
+      id: automatic
+    internet_connected: true
+vmextensions-configuration: []
+vmtypes-configuration: {}

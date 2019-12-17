@@ -1,0 +1,13 @@
+properties_api_certs:
+  cert_pem:
+  private_key_pem:
+properties_proxy_certs:
+  cert_pem:
+  private_key_pem:
+properties_cluster_name_FQDN: redis.us-central1.gcp.dashaun.cloud
+properties_cluster_tcp_routing_domain: tcp.redis.us-central1.gcp.dashaun.cloud
+properties_uaa_client_tcp_routing_id: redis-enterprise
+properties_uaa_client_tcp_routing_secret: ((redis-client-secret))
+properties_rlec_password:
+  secret: ((redis-admin-secret))
+properties_rlec_username: dacarter@pivotal.io
