@@ -6,7 +6,7 @@ opsman-configuration:
     vpc_subnet_id: ((aws.vpc_subnet_id))
     security_group_ids: ((aws.security_group_ids))
     key_pair_name: ((aws.key_pair_name))  # ops-manager-key  # used to ssh to VM
-    iam_instance_profile_name: ((aws.iam_instance_profile_name)) # env_ops_manager
+#    iam_instance_profile_name: ((aws.iam_instance_profile_name)) # env_ops_manager
 
     # At least one IP address (public or private) needs to be assigned to the
     # VM. It is also permissible to assign both.
