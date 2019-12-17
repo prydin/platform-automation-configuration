@@ -1,16 +1,11 @@
 
 ---
-#Version 2.7.1
-gcp:
-  gcp_service_account: ((gcp_credentials_json))
-  project: ((project))
-  region: us-west1
-  zone: us-west1-a
-  vm_name: ops-manager-vm-us-west1               # default: OpsManager-vm
-  vpc_subnet: us-west1-pas-subnet
-  tags: us-west1-ops-manager-external # make sure firewall allow 443/22 for network tag of "ops-manager"
-  custom_cpu: 4                         # default:  8
-  custom_memory: 16                     # default: 16
-  boot_disk_size: 100                   # default: 400
-  public_ip: ((ops_manager_ip))
-  private_ip: ""
+#Operations Manager Version 2.7.6
+aws:
+  region: ((region))
+  vpc_subnet_id: ((vpc_subnet_id))
+  security_group_ids: ((security_group_ids))
+  key_pair_name: ((key_pair_name))
+  iam_instance_profile_name: ((iam_instance_profile_name))
+  access_key_id: ((aws_access_key))
+  secret_access_key: ((aws_secret_key))
