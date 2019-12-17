@@ -2,10 +2,19 @@
 ---
 #Operations Manager Version 2.7.6
 aws:
-  region: ((region))
-  vpc_subnet_id: ((vpc_subnet_id))
-  security_group_ids: ((security_group_ids))
-  key_pair_name: ((key_pair_name))
-  iam_instance_profile_name: ((iam_instance_profile_name))
+  region: us-west-1
+  vpc_subnet_id: vpc-021892a6ca1d4ead9
+  security_group_ids:
+    - sg-0f1b503fc9ea9a27a
+    - sg-039c143fca92f377d
+    - sg-0a805c6bbe40ba15b
+    - sg-00a3110e933d50176
+    - sg-08aeda1695ef764d6
+    - sg-02fb1346ec4328509
+    - sg-0d9626fd99eeef219
+    - sg-0dba5053f1928d1bb
+
+  key_pair_name: us-west-1-ops-manager-key
+  # iam_instance_profile_name: ((iam_instance_profile_name))
   access_key_id: ((aws_access_key))
   secret_access_key: ((aws_secret_key))
