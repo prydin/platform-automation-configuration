@@ -15,7 +15,7 @@ aws:
     - sg-0dba5053f1928d1bb
 
   key_pair_name: us-west-1-ops-manager-key
-  # iam_instance_profile_name: ((iam_instance_profile_name))
+  iam_instance_profile_name: us-west-1-ops-manager
   operations_manger_ip: 52.52.99.85
   access_key_id: ((aws_access_key))
   secret_access_key: ((aws_secret_key))
