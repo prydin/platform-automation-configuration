@@ -3,9 +3,9 @@
 #Operations Manager Version 2.7.6
 aws:
   region: us-west-2
-  vpc_subnet_id: subnet-0122c54ab36a26857 #Choose one of the management subnet IDs
+  vpc_subnet_id: subnet-005101666be9452c6 #Choose one of the public subnet IDs
   security_group_ids:
-  - subnet-005101666be9452c6 # public subnet
+  - sg-0c6fca0c6a45fa539
   key_pair_name: us-west-2-ops-manager-key
   iam_instance_profile_name: us-west-2-ops-manager
   operations_manger_ip: 52.11.137.34
