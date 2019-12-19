@@ -1,10 +1,10 @@
 az-configuration:
-- name: us-west-2c
-  iaas_configuration_name: aws-us-west-2
-  guid: e4d4c07098299d7751b0
 - name: us-west-2b
   iaas_configuration_name: aws-us-west-2
   guid: 609e1fa3a5a7f2bfe014
+- name: us-west-2c
+  iaas_configuration_name: aws-us-west-2
+  guid: e4d4c07098299d7751b0
 iaas-configurations:
 - additional_cloud_properties: {}
   encrypted: ((iaas-configurations_0_encrypted))
@@ -14,14 +14,14 @@ iaas-configurations:
   security_group: ((iaas-configurations_0_security_group))
 network-assignment:
   network:
-    name: management-subnet-0
+    name: management
   other_availability_zones: []
   singleton_availability_zone:
     name: us-west-2c
 networks-configuration:
   icmp_checks_enabled: false
   networks:
-  - name: pas-subnet-0
+  - name: pas
     subnets:
     - iaas_identifier: subnet-051f6f6a4b792b1ae
       cidr: 10.0.4.0/24
@@ -30,8 +30,6 @@ networks-configuration:
       reserved_ip_ranges: 10.0.4.1-10.0.4.9
       availability_zone_names:
       - us-west-2c
-  - name: pas-subnet-1
-    subnets:
     - iaas_identifier: subnet-0b96ff0d6972610c4
       cidr: 10.0.5.0/24
       dns: 1.1.1.1
@@ -39,7 +37,7 @@ networks-configuration:
       reserved_ip_ranges: 10.0.5.1-10.0.5.9
       availability_zone_names:
       - us-west-2b
-  - name: management-subnet-0
+  - name: management
     subnets:
     - iaas_identifier: subnet-0122c54ab36a26857
       cidr: 10.0.16.0/28
@@ -48,8 +46,6 @@ networks-configuration:
       reserved_ip_ranges: 10.0.16.1-10.0.16.9
       availability_zone_names:
       - us-west-2c
-  - name: management-subnet-1
-    subnets:
     - iaas_identifier: subnet-005caf3bb20b3c206
       cidr: 10.0.16.16/28
       dns: 1.1.1.1
@@ -57,7 +53,7 @@ networks-configuration:
       reserved_ip_ranges: 10.0.16.16-10.0.16.25
       availability_zone_names:
       - us-west-2b
-  - name: pks-subnet-0
+  - name: pks
     subnets:
     - iaas_identifier: subnet-0049be746f3499b67
       cidr: 10.0.14.0/24
@@ -66,8 +62,6 @@ networks-configuration:
       reserved_ip_ranges: 10.0.14.1-10.0.14.9
       availability_zone_names:
       - us-west-2c
-  - name: pks-subnet-1
-    subnets:
     - iaas_identifier: subnet-07d5842bef2f532bb
       cidr: 10.0.15.0/24
       dns: 1.1.1.1
@@ -75,7 +69,7 @@ networks-configuration:
       reserved_ip_ranges: 10.0.15.1-10.0.15.9
       availability_zone_names:
       - us-west-2b
-  - name: services-subnet-0
+  - name: services
     subnets:
     - iaas_identifier: subnet-018743e29de91e0ec
       cidr: 10.0.8.0/24
@@ -84,8 +78,6 @@ networks-configuration:
       reserved_ip_ranges: 10.0.8.1-10.0.8.9
       availability_zone_names:
       - us-west-2c
-  - name: services-subnet-1
-    subnets:
     - iaas_identifier: subnet-0825119384e14d9f2
       cidr: 10.0.9.0/24
       dns: 1.1.1.1
@@ -93,7 +85,7 @@ networks-configuration:
       reserved_ip_ranges: 10.0.9.1-10.0.9.9
       availability_zone_names:
       - us-west-2b
-  - name: public-subnet
+  - name: public
     subnets:
     - iaas_identifier: subnet-005101666be9452c6
       cidr: 10.0.0.0/24
