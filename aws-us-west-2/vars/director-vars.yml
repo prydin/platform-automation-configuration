@@ -4,4 +4,5 @@ iaas-configurations_0_key_pair_name: ((key_pair_name))         #terraform
 iaas-configurations_0_name:  aws-us-west-2
 iaas-configurations_0_region:  ((region))                      #terraform
 iaas-configurations_0_security_group: ((security_group_id))    #terraform
+iaas-configurations_0_ssh_private_key: ((ops_manager_ssh_private_key)) #terraform
 properties-configuration_security_configuration_generate_vm_passwords:  ((generate_vm_passwords)) #credhub

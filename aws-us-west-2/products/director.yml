@@ -12,6 +12,7 @@ iaas-configurations:
     name: ((iaas-configurations_0_name))
     region: ((iaas-configurations_0_region))
     security_group: ((iaas-configurations_0_security_group))
+    ssh_private_key: ((iaas-configurations_0_ssh_private_key))
 network-assignment:
   network:
     name: management
