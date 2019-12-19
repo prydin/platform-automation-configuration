@@ -1,107 +1,13 @@
-az-configuration:
-- name: us-west-2b
-  iaas_configuration_name: default
-  guid: aa22317d25d60e6b99c8
-- name: us-west-2c
-  iaas_configuration_name: default
-  guid: 2b729bf6d5fb04341b85
+az-configuration: []
 iaas-configurations:
 - additional_cloud_properties: {}
   encrypted: ((iaas-configurations_0_encrypted))
-  iam_instance_profile: ((iaas-configurations_0_iam_instance_profile))
-  key_pair_name: ((iaas-configurations_0_key_pair_name))
   name: ((iaas-configurations_0_name))
-  region: ((iaas-configurations_0_region))
-  security_group: ((iaas-configurations_0_security_group))
 network-assignment:
-  network:
-    name: management
   other_availability_zones: []
-  singleton_availability_zone:
-    name: us-west-2b
 networks-configuration:
   icmp_checks_enabled: false
-  networks:
-  - name: pas
-    subnets:
-    - iaas_identifier: subnet-051f6f6a4b792b1ae
-      cidr: 10.0.4.0/24
-      dns: 1.1.1.1
-      gateway: 10.0.4.1
-      reserved_ip_ranges: 10.0.4.1-10.0.4.9
-      availability_zone_names:
-      - us-west-2c
-    - iaas_identifier: subnet-0b96ff0d6972610c4
-      cidr: 10.0.5.0/24
-      dns: 1.1.1.1
-      gateway: 10.0.5.1
-      reserved_ip_ranges: 10.0.5.1-10.0.5.9
-      availability_zone_names:
-      - us-west-2b
-  - name: management
-    subnets:
-    - iaas_identifier: subnet-0122c54ab36a26857
-      cidr: 10.0.16.0/28
-      dns: 1.1.1.1
-      gateway: 10.0.16.1
-      reserved_ip_ranges: 10.0.16.1-10.0.16.9
-      availability_zone_names:
-      - us-west-2c
-    - iaas_identifier: subnet-005caf3bb20b3c206
-      cidr: 10.0.16.16/28
-      dns: 1.1.1.1
-      gateway: 10.0.16.16
-      reserved_ip_ranges: 10.0.16.16-10.0.16.25
-      availability_zone_names:
-      - us-west-2b
-  - name: pks
-    subnets:
-    - iaas_identifier: subnet-0049be746f3499b67
-      cidr: 10.0.14.0/24
-      dns: 1.1.1.1
-      gateway: 10.0.14.1
-      reserved_ip_ranges: 10.0.14.1-10.0.14.9
-      availability_zone_names:
-      - us-west-2c
-    - iaas_identifier: subnet-07d5842bef2f532bb
-      cidr: 10.0.15.0/24
-      dns: 1.1.1.1
-      gateway: 10.0.15.1
-      reserved_ip_ranges: 10.0.15.1-10.0.15.9
-      availability_zone_names:
-      - us-west-2b
-  - name: services
-    subnets:
-    - iaas_identifier: subnet-018743e29de91e0ec
-      cidr: 10.0.8.0/24
-      dns: 1.1.1.1
-      gateway: 10.0.8.1
-      reserved_ip_ranges: 10.0.8.1-10.0.8.9
-      availability_zone_names:
-      - us-west-2c
-    - iaas_identifier: subnet-0825119384e14d9f2
-      cidr: 10.0.9.0/24
-      dns: 1.1.1.1
-      gateway: 10.0.9.1
-      reserved_ip_ranges: 10.0.9.1-10.0.9.9
-      availability_zone_names:
-      - us-west-2b
-  - name: public
-    subnets:
-    - iaas_identifier: subnet-005101666be9452c6
-      cidr: 10.0.0.0/24
-      dns: 1.1.1.1
-      gateway: 10.0.0.1
-      reserved_ip_ranges: 10.0.0.1-10.0.0.9
-      availability_zone_names:
-      - us-west-2c
-    - iaas_identifier: subnet-0e546a5b5eb31e59a
-      cidr: 10.0.1.0/24
-      dns: 1.1.1.1
-      gateway: 10.0.1.1
-      reserved_ip_ranges: 10.0.1.1-10.0.1.9
-      availability_zone_names:
-      - us-west-2b
+  networks: []
 properties-configuration:
   director_configuration:
     blobstore_type: local
@@ -121,7 +27,7 @@ properties-configuration:
     keep_unreachable_vms: false
     local_blobstore_options:
       tls_enabled: true
-    ntp_servers_string: 169.254.169.123
+    ntp_servers_string: ""
     post_deploy_enabled: false
     resurrector_enabled: false
     retry_bosh_deploys: false
