@@ -1,10 +1,10 @@
 az-configuration:
-- name: us-west-2c
-  iaas_configuration_name: ((iaas-configurations_0_name))
-  guid: e4d4c07098299d7751b0
 - name: us-west-2b
-  iaas_configuration_name: ((iaas-configurations_0_name))
+  iaas_configuration_name: aws-us-west-2
   guid: 609e1fa3a5a7f2bfe014
+- name: us-west-2c
+  iaas_configuration_name: aws-us-west-2
+  guid: e4d4c07098299d7751b0
 iaas-configurations:
 - additional_cloud_properties: {}
   encrypted: ((iaas-configurations_0_encrypted))
@@ -14,7 +14,7 @@ iaas-configurations:
   security_group: ((iaas-configurations_0_security_group))
 network-assignment:
   network:
-    name: pas-subnet-0
+    name: management-subnet-0
   other_availability_zones: []
   singleton_availability_zone:
     name: us-west-2c
@@ -27,7 +27,7 @@ networks-configuration:
       cidr: 10.0.4.0/24
       dns: 1.1.1.1
       gateway: 10.0.4.1
-      reserved_ip_ranges: ""
+      reserved_ip_ranges: 10.0.4.1-10.0.4.9
       availability_zone_names:
       - us-west-2c
   - name: pas-subnet-1
@@ -36,7 +36,7 @@ networks-configuration:
       cidr: 10.0.5.0/24
       dns: 1.1.1.1
       gateway: 10.0.5.1
-      reserved_ip_ranges: ""
+      reserved_ip_ranges: 10.0.5.1-10.0.5.9
       availability_zone_names:
       - us-west-2b
   - name: management-subnet-0
