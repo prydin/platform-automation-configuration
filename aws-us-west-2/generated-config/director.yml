@@ -1,13 +1,35 @@
-az-configuration: []
+az-configuration:
+- name: us-west-2b
+  iaas_configuration_name: default
+  guid: 609e1fa3a5a7f2bfe014
+- name: us-west-2c
+  iaas_configuration_name: default
+  guid: e4d4c07098299d7751b0
 iaas-configurations:
 - additional_cloud_properties: {}
   encrypted: ((iaas-configurations_0_encrypted))
+  key_pair_name: ((iaas-configurations_0_key_pair_name))
   name: ((iaas-configurations_0_name))
+  region: ((iaas-configurations_0_region))
+  security_group: ((iaas-configurations_0_security_group))
 network-assignment:
+  network:
+    name: us-west-2-pas-subnet
   other_availability_zones: []
+  singleton_availability_zone:
+    name: us-west-2b
 networks-configuration:
   icmp_checks_enabled: false
-  networks: []
+  networks:
+  - name: us-west-2-pas-subnet
+    subnets:
+    - iaas_identifier: subnet-051f6f6a4b792b1ae
+      cidr: 10.0.4.0/24
+      dns: 1.1.1.1
+      gateway: 10.0.4.1
+      reserved_ip_ranges: ""
+      availability_zone_names:
+      - us-west-2b
 properties-configuration:
   director_configuration:
     blobstore_type: local
@@ -27,8 +49,8 @@ properties-configuration:
     keep_unreachable_vms: false
     local_blobstore_options:
       tls_enabled: true
-    ntp_servers_string: ""
-    post_deploy_enabled: false
+    ntp_servers_string: 169.254.169.123
+    post_deploy_enabled: true
     resurrector_enabled: false
     retry_bosh_deploys: false
     skip_director_drain: false
