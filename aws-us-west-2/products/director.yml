@@ -14,7 +14,7 @@ iaas-configurations:
     security_group: ((iaas-configurations_0_security_group))
 network-assignment:
   network:
-    name: public
+    name: management
   other_availability_zones: []
   singleton_availability_zone:
     name: us-west-2c
