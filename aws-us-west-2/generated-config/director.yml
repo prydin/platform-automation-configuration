@@ -17,7 +17,7 @@ network-assignment:
     name: pas-subnet-0
   other_availability_zones: []
   singleton_availability_zone:
-    name: us-west-2b
+    name: us-west-2c
 networks-configuration:
   icmp_checks_enabled: false
   networks:
