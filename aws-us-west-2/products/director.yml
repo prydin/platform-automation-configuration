@@ -1,10 +1,10 @@
 az-configuration:
 - name: us-west-2b
   iaas_configuration_name: default
-  guid: d4ba7037e24fcb64450c
+  guid: 382fb717e897943d6612
 - name: us-west-2c
   iaas_configuration_name: default
-  guid: 8691e4a71bd0d86de343
+  guid: ef4dfb6c61a4b88d6402
 iaas-configurations:
 - additional_cloud_properties: {}
   encrypted: ((iaas-configurations_0_encrypted))
@@ -120,8 +120,9 @@ properties-configuration:
     job_configuration_on_tmpfs: false
     keep_unreachable_vms: false
     local_blobstore_options:
-      tls_enabled: true
-    ntp_servers_string: 169.254.169.123
+      enable_signed_urls: false
+    ntp_servers_string: 0.amazon.pool.ntp.org, 1.amazon.pool.ntp.org, 2.amazon.pool.ntp.org,
+      3.amazon.pool.ntp.org
     post_deploy_enabled: false
     resurrector_enabled: false
     retry_bosh_deploys: false
