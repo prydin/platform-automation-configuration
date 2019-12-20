@@ -288,12 +288,8 @@ product-properties:
   .properties.system_metrics_enabled:
     value: true
   .properties.tcp_routing:
-    selected_option: enable
-    value: enable
-  .properties.tcp_routing.enable.request_timeout_in_seconds:
-    value: 300
-  .properties.tcp_routing.enable.reservable_ports:
-    value: 1024-1033
+    selected_option: disable
+    value: disable
   .properties.uaa:
     selected_option: internal
     value: internal
@@ -484,7 +480,8 @@ resource-config:
     max_in_flight: 1
     additional_networks: []
     additional_vm_extensions: []
-    elb_names: ["us-west-2-tcp-lb"]
+    elb_names:
+    - us-west-2-tcp-lb
     instance_type:
       id: automatic
     instances: automatic
