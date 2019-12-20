@@ -291,8 +291,6 @@ product-properties:
   .properties.system_database:
     selected_option: internal_pxc
     value: internal_pxc
-  .properties.system_metrics_enabled:
-    value: true
   .properties.tcp_routing:
     selected_option: disable
     value: disable
