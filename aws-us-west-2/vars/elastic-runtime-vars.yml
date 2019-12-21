@@ -15,6 +15,10 @@ properties_nfs_volume_driver_enable_ldap_service_account_password:
 uaa_service_provider_key_password:
   secret: ((uaa_service_provider_key_password))
 
+uaa_service_provider_key_credentials:
+  cert_pem: ((generated_cert.certificate))
+  private_key_pem: ((generated_cert.private_key))
+
 properties_smtp_credentials:
   identity: apikey
   password: ((smtp_credentials.password))
