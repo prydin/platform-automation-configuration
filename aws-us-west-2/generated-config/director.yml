@@ -2,7 +2,10 @@ az-configuration: []
 iaas-configurations:
 - additional_cloud_properties: {}
   encrypted: ((iaas-configurations_0_encrypted))
+  key_pair_name: ((iaas-configurations_0_key_pair_name))
   name: ((iaas-configurations_0_name))
+  region: ((iaas-configurations_0_region))
+  security_group: ((iaas-configurations_0_security_group))
 network-assignment:
   other_availability_zones: []
 networks-configuration:
