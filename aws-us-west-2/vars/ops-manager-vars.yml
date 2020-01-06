@@ -1,9 +1,8 @@
-
+### Operations Manager 2.8.0
 ---
-#Operations Manager Version 2.7.6
 aws:
   region: us-west-2
-  vpc_subnet_id: subnet-0d9844fe0e5b1a716 #Choose one of the public subnet IDs
+  vpc_subnet_id: vpc-081e059e64064d831 #Choose one of the public subnet IDs
   security_group_ids:
   - sg-061d21b7543afbf41
   key_pair_name: us-west-2-ops-manager-key

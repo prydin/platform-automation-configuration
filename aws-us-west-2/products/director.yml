@@ -1,3 +1,5 @@
+### Operations Manager 2.8.0
+---
 az-configuration:
 - name: us-west-2b
   iaas_configuration_name: default
@@ -11,6 +13,8 @@ iaas-configurations:
   region: ((iaas-configurations_0_region))
   security_group: ((iaas-configurations_0_security_group))
   ssh_private_key: ((iaas-configurations_0_ssh_private_key))
+  access_key_id: ((iaas-configurations_0_access_key_id))
+  secret_access_key: ((iaas-configurations_0_secret_access_key))
 network-assignment:
   network:
     name: management
