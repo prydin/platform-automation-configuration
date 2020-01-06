@@ -24,14 +24,14 @@ networks-configuration:
   networks:
   - name: pas
     subnets:
-    - iaas_identifier: subnet-051f6f6a4b792b1ae
+    - iaas_identifier: subnet-0e717eec0289a6e08
       cidr: 10.0.4.0/24
       dns: 1.1.1.1
       gateway: 10.0.4.1
       reserved_ip_ranges: 10.0.4.1-10.0.4.9
       availability_zone_names:
       - us-west-2c
-    - iaas_identifier: subnet-0b96ff0d6972610c4
+    - iaas_identifier: subnet-099d1065e116cbc64
       cidr: 10.0.5.0/24
       dns: 1.1.1.1
       gateway: 10.0.5.1
@@ -40,14 +40,14 @@ networks-configuration:
       - us-west-2b
   - name: management
     subnets:
-    - iaas_identifier: subnet-0122c54ab36a26857
+    - iaas_identifier: subnet-061a7411cb17a576e
       cidr: 10.0.16.0/28
       dns: 1.1.1.1
       gateway: 10.0.16.1
       reserved_ip_ranges: 10.0.16.1-10.0.16.9
       availability_zone_names:
       - us-west-2c
-    - iaas_identifier: subnet-005caf3bb20b3c206
+    - iaas_identifier: subnet-0dbff2481ef652922
       cidr: 10.0.16.16/28
       dns: 1.1.1.1
       gateway: 10.0.16.17
@@ -56,14 +56,14 @@ networks-configuration:
       - us-west-2b
   - name: pks
     subnets:
-    - iaas_identifier: subnet-0049be746f3499b67
+    - iaas_identifier: subnet-016dfeb1edefcb8d5
       cidr: 10.0.14.0/24
       dns: 1.1.1.1
       gateway: 10.0.14.1
       reserved_ip_ranges: 10.0.14.1-10.0.14.9
       availability_zone_names:
       - us-west-2c
-    - iaas_identifier: subnet-07d5842bef2f532bb
+    - iaas_identifier: subnet-068c7632c673503b2
       cidr: 10.0.15.0/24
       dns: 1.1.1.1
       gateway: 10.0.15.1
@@ -72,14 +72,14 @@ networks-configuration:
       - us-west-2b
   - name: services
     subnets:
-    - iaas_identifier: subnet-018743e29de91e0ec
+    - iaas_identifier: subnet-0b27277ea9a120f5e
       cidr: 10.0.8.0/24
       dns: 1.1.1.1
       gateway: 10.0.8.1
       reserved_ip_ranges: 10.0.8.1-10.0.8.9
       availability_zone_names:
       - us-west-2c
-    - iaas_identifier: subnet-0825119384e14d9f2
+    - iaas_identifier: subnet-0fa5e221b777b2007
       cidr: 10.0.9.0/24
       dns: 1.1.1.1
       gateway: 10.0.9.1
@@ -88,14 +88,14 @@ networks-configuration:
       - us-west-2b
   - name: public
     subnets:
-    - iaas_identifier: subnet-005101666be9452c6
+    - iaas_identifier: subnet-0d9844fe0e5b1a716
       cidr: 10.0.0.0/24
       dns: 1.1.1.1
       gateway: 10.0.0.1
       reserved_ip_ranges: 10.0.0.1-10.0.0.9
       availability_zone_names:
       - us-west-2c
-    - iaas_identifier: subnet-0e546a5b5eb31e59a
+    - iaas_identifier: subnet-076eae11e4e0cb69d
       cidr: 10.0.1.0/24
       dns: 1.1.1.1
       gateway: 10.0.1.1
