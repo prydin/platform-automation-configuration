@@ -180,7 +180,7 @@ resource-config:
     max_in_flight: 1
     additional_networks: []
     additional_vm_extensions:
-    - sg-0f3677a226e9443c1
+    - pks_lb_security_groups
     elb_names:
     - alb:us-west-2-pks-tg-9021
     - alb:us-west-2-pks-tg-8443
