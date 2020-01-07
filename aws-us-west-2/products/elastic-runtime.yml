@@ -401,9 +401,10 @@ resource-config:
   control:
     max_in_flight: 1
     additional_networks: []
-    additional_vm_extensions: []
+    additional_vm_extensions:
+    - sg-07ce6b82f813fc14e
     elb_names:
-    - us-west-2-ssh-lb
+    - alb:us-west-2-ssh-tg
     instance_type:
       id: automatic
     instances: automatic
@@ -474,9 +475,11 @@ resource-config:
   router:
     max_in_flight: 1
     additional_networks: []
-    additional_vm_extensions: []
+    additional_vm_extensions:
+    - sg-0e04bf36424e3b2cb
     elb_names:
-    - us-west-2-web-lb
+    - alb:us-west-2-web-tg-80
+    - alb:us-west-2-web-tg-443
     instance_type:
       id: automatic
     instances: automatic
@@ -485,9 +488,19 @@ resource-config:
   tcp_router:
     max_in_flight: 1
     additional_networks: []
-    additional_vm_extensions: []
+    additional_vm_extensions:
+    - sg-0d4165aebe989146b
     elb_names:
-    - us-west-2-tcp-lb
+    - alb:us-west-2-tcp-tg-1024
+    - alb:us-west-2-tcp-tg-1025
+    - alb:us-west-2-tcp-tg-1026
+    - alb:us-west-2-tcp-tg-1027
+    - alb:us-west-2-tcp-tg-1028
+    - alb:us-west-2-tcp-tg-1029
+    - alb:us-west-2-tcp-tg-1030
+    - alb:us-west-2-tcp-tg-1031
+    - alb:us-west-2-tcp-tg-1032
+    - alb:us-west-2-tcp-tg-1033
     instance_type:
       id: automatic
     instances: 0
