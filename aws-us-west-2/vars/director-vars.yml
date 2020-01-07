@@ -4,7 +4,7 @@ iaas-configurations_0_encrypted: ((encrypt_linux_ebs_volumes)) #credhub
 iaas-configurations_0_key_pair_name: ((key_pair_name))         #terraform
 iaas-configurations_0_name:  aws-us-west-2
 iaas-configurations_0_region:  ((region))                      #terraform
-iaas-configurations_0_security_group: ((security_group_id))    #terraform
+iaas-configurations_0_security_group: sg-08a19f1bdbd39762b    #terraform
 iaas-configurations_0_ssh_private_key: ((ops_manager_ssh_private_key)) #terraform
 iaas-configurations_0_access_key_id: ((aws_access_key))
 iaas-configurations_0_secret_access_key: ((aws_secret_key))
