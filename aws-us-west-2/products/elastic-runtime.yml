@@ -402,7 +402,7 @@ resource-config:
     max_in_flight: 1
     additional_networks: []
     additional_vm_extensions:
-    - sg-07ce6b82f813fc14e
+    - us-west-2-ssh-lb-sg
     elb_names:
     - alb:us-west-2-ssh-tg
     instance_type:
@@ -476,7 +476,7 @@ resource-config:
     max_in_flight: 1
     additional_networks: []
     additional_vm_extensions:
-    - sg-0e04bf36424e3b2cb
+    - us-west-2-web-lb-sg
     elb_names:
     - alb:us-west-2-web-tg-80
     - alb:us-west-2-web-tg-443
@@ -489,7 +489,7 @@ resource-config:
     max_in_flight: 1
     additional_networks: []
     additional_vm_extensions:
-    - sg-0d4165aebe989146b
+    - us-west-2-tcp-lb-sg
     elb_names:
     - alb:us-west-2-tcp-tg-1024
     - alb:us-west-2-tcp-tg-1025
