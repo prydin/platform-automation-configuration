@@ -158,6 +158,22 @@ resource-configuration:
     persistent_disk:
       size_mb: automatic
     swap_as_percent_of_memory_size: automatic
-vmextensions-configuration: []
+vmextensions-configuration:
+- name: pks_lb_security_groups
+  cloud_properties:
+    security_groups:
+      - us-west-2-pks-api-lb-sg
+- name: tcp-lb-security-groups
+  cloud_properties:
+    security_groups:
+      - us-west-2-tcp-lb-sg
+- name: web-lb-security-groups
+  cloud_properties:
+    security_groups:
+      - us-west-2-web-lb-sg
+- name: ssh-lb-security-groups
+  cloud_properties:
+    security_groups:
+      - us-west-2-ssh-lb-sg
 vmtypes-configuration: {}
 
