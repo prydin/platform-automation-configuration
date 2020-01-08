@@ -14,7 +14,7 @@ products:
     pivnet-api-token: ((pivnet_token))
     pivnet-file-glob: "srt-*.pivotal"            # For full fledged PAS, use "cf-*.pivotal"
   pas-stemcell:                                  # 2) use this session to specify exact stemcell you want
-    product-version: "621.26"                    # applicable stemcell range: 315.93–315.99
+    product-version: "621.29"                    # applicable stemcell range: 315.93–315.99
     pivnet-product-slug: stemcells-ubuntu-xenial
     pivnet-api-token: ((pivnet_token))
     pivnet-file-glob: "light-bosh-stemcell-*-aws-xen-hvm-ubuntu-xenial-go_agent.tgz"
