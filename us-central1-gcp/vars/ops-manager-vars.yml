@@ -4,11 +4,11 @@
 gcp:
   gcp_service_account: ((gcp_credentials_json))
   project: ((project))
-  region: us-central1
-  zone: us-central1-a
+  region: us-central1 #terraform output
+  zone: us-central1-a #terraform
   vm_name: ops-manager-vm-us-central1
   vpc_subnet: us-central1-pas-subnet
-  tags: us-central1-ops-manager-external # make sure firewall allow 443/22 for network tag of "ops-manager"
+  tags: us-central1-ops-manager         # make sure firewall allow 443/22 for network tag of "ops-manager"
   custom_cpu: 4                         # default:  8
   custom_memory: 16                     # default: 16
   boot_disk_size: 100                   # default: 400
