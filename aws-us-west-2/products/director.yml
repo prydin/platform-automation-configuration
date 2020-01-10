@@ -163,17 +163,21 @@ vmextensions-configuration:
   cloud_properties:
     security_groups:
       - us-west-2-pks-api-lb-sg
+      - us-west-2-platform-vms-sg
 - name: tcp-lb-security-groups
   cloud_properties:
     security_groups:
       - us-west-2-tcp-lb-sg
+      - us-west-2-platform-vms-sg
 - name: web-lb-security-groups
   cloud_properties:
     security_groups:
       - us-west-2-web-lb-sg
+      - us-west-2-platform-vms-sg
 - name: ssh-lb-security-groups
   cloud_properties:
     security_groups:
       - us-west-2-ssh-lb-sg
+      - us-west-2-platform-vms-sg
 vmtypes-configuration: {}
 
