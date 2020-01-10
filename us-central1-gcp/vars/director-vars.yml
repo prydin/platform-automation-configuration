@@ -3,7 +3,7 @@
 # iaas-configuration:
 
 iaas-configurations_0_associated_service_account: ((service_account_key)) #terraform
-iaas-configurations_0_default_deployment_tag: ((env_name)) #terraform
-iaas-configurations_0_name: ((env_name)) #terraform
+iaas-configurations_0_default_deployment_tag: us-central1 #((env_name)) #terraform
+iaas-configurations_0_name: us-central1 #((env_name)) #terraform
 iaas-configurations_0_project: ((project))
 properties-configuration_security_configuration_generate_vm_passwords: true
