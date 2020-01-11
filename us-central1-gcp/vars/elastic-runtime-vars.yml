@@ -17,7 +17,8 @@ properties_smtp_credentials:
   password: ((smtp_credentials.password))
 
 properties_credhub_hsm_provider_client_certificate: ""
-properties_credhub_hsm_provider_partition_password: ""
+properties_credhub_hsm_provider_partition_password:
+  secret: ""
 properties_credhub_internal_provider_keys_0_key:
   secret: ((properties_credhub_key_encryption_passwords_0_key))
 
