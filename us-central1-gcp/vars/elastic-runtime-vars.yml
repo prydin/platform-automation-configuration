@@ -25,4 +25,6 @@ properties_credhub_internal_provider_keys_0_key:
   secret: ((properties_credhub_key_encryption_passwords_0_key))
 
 properties_nfs_volume_driver_enable_ldap_service_account_password: ""
-uaa_service_provider_key_credentials: ((uaa_service_provider_key_password))
+uaa_service_provider_key_credentials:
+  cert_pem: ""
+  private_key_pem: ""
