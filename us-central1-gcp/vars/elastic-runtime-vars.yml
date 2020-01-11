@@ -1,4 +1,7 @@
 ---
+cloud_controller_encrypt_key:
+  secret: ((cloud_controller_encrypt_key))
+
 properties_credhub_key_encryption_passwords_0_key:
   secret: ((properties_credhub_key_encryption_passwords_0_key))
 
