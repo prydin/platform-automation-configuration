@@ -15,3 +15,11 @@ uaa_service_provider_key_password:
 properties_smtp_credentials:
   identity: apikey
   password: ((smtp_credentials.password))
+
+properties_credhub_hsm_provider_client_certificate: ""
+properties_credhub_hsm_provider_partition_password: ""
+properties_credhub_internal_provider_keys_0_key:
+  secret: ((properties_credhub_key_encryption_passwords_0_key))
+
+properties_nfs_volume_driver_enable_ldap_service_account_password: ""
+uaa_service_provider_key_credentials: ((uaa_service_provider_key_password))
