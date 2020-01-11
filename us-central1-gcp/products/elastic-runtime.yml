@@ -402,7 +402,8 @@ resource-config:
     max_in_flight: 1
     additional_networks: []
     additional_vm_extensions: []
-    elb_names: []
+    elb_names:
+      - tcp:us-central1-ssh-lb
     instance_type:
       id: automatic
     instances: automatic
@@ -474,7 +475,9 @@ resource-config:
     max_in_flight: 1
     additional_networks: []
     additional_vm_extensions: []
-    elb_names: []
+    elb_names:
+      - tcp:us-central1-websocket-lb
+      - http:us-central1-http-lb
     instance_type:
       id: automatic
     instances: automatic
@@ -484,7 +487,8 @@ resource-config:
     max_in_flight: 1
     additional_networks: []
     additional_vm_extensions: []
-    elb_names: []
+    elb_names:
+      - tcp:us-central1-tcp-lb
     instance_type:
       id: automatic
     instances: 0
