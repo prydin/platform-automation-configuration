@@ -16,7 +16,8 @@ properties_smtp_credentials:
   identity: apikey
   password: ((smtp_credentials.password))
 
-properties_credhub_hsm_provider_client_certificate: ""
+properties_credhub_hsm_provider_client_certificate:
+  cert_pem: ""
 properties_credhub_hsm_provider_partition_password:
   secret: ""
 properties_credhub_internal_provider_keys_0_key:
