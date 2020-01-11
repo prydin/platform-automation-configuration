@@ -3,7 +3,7 @@ product-properties:
   .cloud_controller.allow_app_ssh_access:
     value: true
   .cloud_controller.apps_domain:
-    value: apps.us-central1.tsfti.gcp.dashaun.cloud
+    value: apps.us-central1.tfsti.gcp.dashaun.cloud
   .cloud_controller.default_app_memory:
     value: 1024
   .cloud_controller.default_app_ssh_access:
@@ -30,7 +30,7 @@ product-properties:
   .cloud_controller.staging_timeout_in_seconds:
     value: 900
   .cloud_controller.system_domain:
-    value: sys.us-central1.tsfti.gcp.dashaun.cloud
+    value: sys.us-central1.tfsti.gcp.dashaun.cloud
   .diego_brain.starting_container_count_maximum:
     value: 200
   .ha_proxy.skip_cert_verify:
@@ -402,7 +402,8 @@ resource-config:
     max_in_flight: 1
     additional_networks: []
     additional_vm_extensions: []
-    elb_names: []
+    elb_names:
+    - tcp:us-central1-ssh-lb
     instance_type:
       id: automatic
     instances: automatic
@@ -474,7 +475,9 @@ resource-config:
     max_in_flight: 1
     additional_networks: []
     additional_vm_extensions: []
-    elb_names: []
+    elb_names:
+    - tcp:us-central1-websocket-lb
+    - http:us-central1-http-lb
     instance_type:
       id: automatic
     instances: automatic
@@ -484,7 +487,8 @@ resource-config:
     max_in_flight: 1
     additional_networks: []
     additional_vm_extensions: []
-    elb_names: []
+    elb_names:
+    - tcp:us-central1-tcp-lb
     instance_type:
       id: automatic
     instances: 0
