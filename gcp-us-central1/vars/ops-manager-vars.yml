@@ -8,7 +8,7 @@ gcp:
   zone: ((tf_availability_zones_0))
   vm_name: opsmanager-vm-((tf_region))
   vpc_subnet: ((tf_subnet_pas_name))
-  tags: us-central1-ops-manager         # make sure firewall allow 443/22 for network tag of "ops-manager"
+  tags: gcp-us-central1-ops-manager         # make sure firewall allow 443/22 for network tag of "ops-manager"
   custom_cpu: 4                         # default:  8
   custom_memory: 16                     # default: 16
   boot_disk_size: 100                   # default: 400
