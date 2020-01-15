@@ -1,10 +1,8 @@
 az-configuration:
-- name: ((availability_zones_0))
+- name: ((tf_availability_zones_0))
   iaas_configuration_name: default
-  guid: cb16379444247bb6d61c
-- name: us-central1-b
+- name: ((tf_availability_zones_1))
   iaas_configuration_name: default
-  guid: 3cdc89fa8668f52a5fee
 iaas-configurations:
 - additional_cloud_properties: {}
   auth_json: ((iaas-configurations_0_auth_json))
@@ -14,47 +12,47 @@ iaas-configurations:
   project: ((iaas-configurations_0_project))
 network-assignment:
   network:
-    name: us-central1-network
+    name: ((tf_network_name))
   other_availability_zones: []
   singleton_availability_zone:
-    name: us-central1-a
+    name: ((tf_availability_zones_0))
 networks-configuration:
   icmp_checks_enabled: false
   networks:
-  - name: us-central1-network
+  - name: ((tf_network_name))
     subnets:
-    - iaas_identifier: us-central1-network/us-central1-management-subnet/us-central1/
-      cidr: 10.0.0.0/26
+    - iaas_identifier: ((tf_network_name))/((tf_subnet_management_name))/us-central1/
+      cidr: ((tf_subnet_management_cidr))
       dns: 169.254.169.254, 8.8.8.8
-      gateway: 10.0.0.1
+      gateway: ((tf_subnet_management_gateway))
       reserved_ip_ranges: 10.0.0.1-10.0.0.9
       availability_zone_names:
-      - us-central1-a
-      - us-central1-b
-    - iaas_identifier: us-central1-network/us-central1-pas-subnet/us-central1/
-      cidr: 10.0.4.0/24
+      - ((tf_availability_zones_0))
+      - ((tf_availability_zones_1))
+    - iaas_identifier: ((tf_network_name))/((tf_subnet_pas_name))/us-central1/
+      cidr: ((tf_subnet_pas_cidr))
       dns: 169.254.169.254, 8.8.8.8
-      gateway: 10.0.4.1
+      gateway: ((tf_subnet_pas_gateway))
       reserved_ip_ranges: 10.0.4.1-10.0.4.9
       availability_zone_names:
-      - us-central1-a
-      - us-central1-b
-    - iaas_identifier: us-central1-network/us-central1-pks-subnet/us-central1/
-      cidr: 10.0.10.0/24
+      - ((tf_availability_zones_0))
+      - ((tf_availability_zones_1))
+    - iaas_identifier: ((tf_network_name))/((tf_subnet_pks_name))/us-central1/
+      cidr: ((tf_subnet_pks_cidr))
       dns: 169.254.169.254, 8.8.8.8
-      gateway: 10.0.10.1
+      gateway: ((tf_subnet_pks_gateway))
       reserved_ip_ranges: 10.0.10.1-10.0.10.9
       availability_zone_names:
-      - us-central1-a
-      - us-central1-b
-    - iaas_identifier: us-central1-network/us-central1-services-subnet/us-central1/
-      cidr: 10.0.8.0/24
+      - ((tf_availability_zones_0))
+      - ((tf_availability_zones_1))
+    - iaas_identifier: ((tf_network_name))/((tf_subnet_services_name))/us-central1/
+      cidr: ((tf_subnet_services_cidr))
       dns: 169.254.169.254, 8.8.8.8
-      gateway: 10.0.8.1
+      gateway: ((tf_subnet_services_gateway))
       reserved_ip_ranges: 10.0.8.1-10.0.8.9
       availability_zone_names:
-      - us-central1-a
-      - us-central1-b
+      - ((tf_availability_zones_0))
+      - ((tf_availability_zones_1))
 properties-configuration:
   director_configuration:
     blobstore_type: local

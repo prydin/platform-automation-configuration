@@ -8,3 +8,19 @@ iaas-configurations_0_default_deployment_tag: us-central1 #((env_name)) #terrafo
 iaas-configurations_0_name: us-central1 #((env_name)) #terraform
 iaas-configurations_0_project: ((project))
 properties-configuration_security_configuration_generate_vm_passwords: true
+
+tf_availability_zones_0: ((tf_availability_zones_0))
+tf_availability_zones_1: ((tf_availability_zones_1))
+tf_network_name: ((tf_network_name))
+tf_subnet_management_cidr: ((tf_subnet_management_cidr))
+tf_subnet_management_gateway: ((tf_subnet_management_gateway))
+tf_subnet_management_name: ((tf_subnet_management_name))
+tf_subnet_pas_cidr: ((tf_subnet_pas_cidr))
+tf_subnet_pas_gateway: ((tf_subnet_pas_gateway))
+tf_subnet_pas_name: ((tf_subnet_pas_name))
+tf_subnet_pks_cidr: ((tf_subnet_pks_cidr))
+tf_subnet_pks_gateway: ((tf_subnet_pks_gateway))
+tf_subnet_pks_name: ((tf_subnet_pks_name))
+tf_subnet_services_cidr: ((tf_subnet_services_cidr))
+tf_subnet_services_gateway: ((tf_subnet_services_gateway))
+tf_subnet_services_name: ((tf_subnet_services_name))
