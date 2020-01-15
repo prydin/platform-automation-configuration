@@ -1,5 +1,5 @@
 az-configuration:
-- name: us-central1-a
+- name: ((availability_zones_0))
   iaas_configuration_name: default
   guid: cb16379444247bb6d61c
 - name: us-central1-b
