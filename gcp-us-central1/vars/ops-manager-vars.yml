@@ -12,5 +12,5 @@ gcp:
   custom_cpu: 4                         # default:  8
   custom_memory: 16                     # default: 16
   boot_disk_size: 100                   # default: 400
-  public_ip: ((tf_ops_manager_public_ip"))
+  public_ip: ((tf_ops_manager_public_ip))
   private_ip: ""
