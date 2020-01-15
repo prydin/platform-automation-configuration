@@ -21,7 +21,7 @@ products:
     pivnet-file-glob: "light-bosh-stemcell-*-google-kvm-ubuntu-xenial-go_agent.tgz"
 
   pks:
-    product-version: "1.6.0"
+    product-version: "1.6.1"
     pivnet-product-slug: pivotal-container-service
     pivnet-api-token: ((pivnet_token))
     pivnet-file-glob: "*.pivotal"
