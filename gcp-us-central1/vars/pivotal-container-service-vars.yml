@@ -1,7 +1,23 @@
+environment_name: ((environment_name))
+
+iaas: ((iaas))
+
 pivotal-container-service_pks_tls:
   cert_pem: ((generated_cert.certificate))
   private_key_pem: ((generated_cert.private_key))
+
+project: ((project))
+
 properties_cloud_provider_vsphere_vcenter_master_creds:
   identity: ""
   password: ""
+
+tf_availability_zones_0: ((tf_availability_zones_0))
+tf_availability_zones_1: ((tf_availability_zones_1))
+
 tf_network_name: ((tf_network_name))
+
+tf_service_account_pks_master_id: ((tf_service_account_pks_master_id))
+tf_service_account_pks_worker_id: ((tf_service_account_pks_worker_id))
+
+tf_subnet_pks_name: ((tf_subnet_pks_name))
