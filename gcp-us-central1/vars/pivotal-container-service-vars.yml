@@ -1,4 +1,5 @@
 pivotal-container-service_pks_tls:
   cert_pem: ((generated_cert.certificate))
   private_key_pem: ((generated_cert.private_key))
+properties_cloud_provider_vsphere_vcenter_master_creds: ""
 tf_network_name: ((tf_network_name))
