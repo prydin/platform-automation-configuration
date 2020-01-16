@@ -1,13 +1,58 @@
-az-configuration: []
+az-configuration:
+- name: us-central1-b
+  iaas_configuration_name: us-central1
+  guid: 529939f3f7837231eeee
+- name: us-central1-a
+  iaas_configuration_name: us-central1
+  guid: f736105b13ad997aed52
 iaas-configurations:
 - additional_cloud_properties: {}
   default_deployment_tag: ((iaas-configurations_0_default_deployment_tag))
   name: ((iaas-configurations_0_name))
+  project: ((iaas-configurations_0_project))
 network-assignment:
+  network:
+    name: gcp-us-central1-network
   other_availability_zones: []
+  singleton_availability_zone:
+    name: us-central1-a
 networks-configuration:
   icmp_checks_enabled: false
-  networks: []
+  networks:
+  - name: gcp-us-central1-network
+    subnets:
+    - iaas_identifier: gcp-us-central1-network/gcp-us-central1-management-subnet/us-central1/
+      cidr: 10.0.0.0/26
+      dns: 169.254.169.254, 8.8.8.8
+      gateway: 10.0.0.1
+      reserved_ip_ranges: 10.0.0.1-10.0.0.9
+      availability_zone_names:
+      - us-central1-a
+      - us-central1-b
+    - iaas_identifier: gcp-us-central1-network/gcp-us-central1-pas-subnet/us-central1/
+      cidr: 10.0.4.0/24
+      dns: 169.254.169.254, 8.8.8.8
+      gateway: 10.0.4.1
+      reserved_ip_ranges: 10.0.4.1-10.0.4.9
+      availability_zone_names:
+      - us-central1-a
+      - us-central1-b
+    - iaas_identifier: gcp-us-central1-network/gcp-us-central1-pks-subnet/us-central1/
+      cidr: 10.0.10.0/24
+      dns: 169.254.169.254, 8.8.8.8
+      gateway: 10.0.10.1
+      reserved_ip_ranges: 10.0.10.1-10.0.10.9
+      availability_zone_names:
+      - us-central1-a
+      - us-central1-b
+    - iaas_identifier: gcp-us-central1-network/gcp-us-central1-services-subnet/us-central1/
+      cidr: 10.0.8.0/24
+      dns: 169.254.169.254, 8.8.8.8
+      gateway: 10.0.8.1
+      reserved_ip_ranges: 10.0.8.1-10.0.8.9
+      availability_zone_names:
+      - us-central1-a
+      - us-central1-b
 properties-configuration:
   director_configuration:
     blobstore_type: local
@@ -27,7 +72,7 @@ properties-configuration:
     keep_unreachable_vms: false
     local_blobstore_options:
       enable_signed_urls: false
-    ntp_servers_string: ""
+    ntp_servers_string: metadata.google.internal
     post_deploy_enabled: false
     resurrector_enabled: false
     retry_bosh_deploys: false
