@@ -3,8 +3,8 @@ environment_name: ((environment_name))
 iaas: ((iaas))
 
 pivotal-container-service_pks_tls:
-  cert_pem: ((generated_cert.certificate))
-  private_key_pem: ((generated_cert.private_key))
+  cert_pem: ((acme.certificate))
+  private_key_pem: ((acme.private_key))
 
 project: ((project))
 
