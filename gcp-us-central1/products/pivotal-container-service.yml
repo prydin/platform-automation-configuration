@@ -148,9 +148,10 @@ product-properties:
     selected_option: disabled
     value: disabled
   .properties.worker_max_in_flight:
-    value: 4
+    value: 5
 network-properties:
-  network: null
+  network:
+    name: ((tf_network_name))
   other_availability_zones: []
   service_network: null
   singleton_availability_zone: null
