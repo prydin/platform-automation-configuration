@@ -2,6 +2,11 @@
 cloud_controller_encrypt_key:
   secret: ((cloud_controller_encrypt_key))
 
+email: ((email))
+environment_name: ((environment_name))
+
+iaas: ((iaas))
+
 properties_credhub_key_encryption_passwords_0_key:
   secret: ((properties_credhub_key_encryption_passwords_0_key))
 
@@ -29,3 +34,13 @@ properties_nfs_volume_driver_enable_ldap_service_account_password:
 uaa_service_provider_key_credentials:
   cert_pem: ((properties_networking_poe_ssl_certs_0_certificate.certificate))
   private_key_pem: ((properties_networking_poe_ssl_certs_0_certificate.private_key))
+
+tf_availability_zones_0: ((tf_availability_zones_0))
+tf_availability_zones_1: ((tf_availability_zones_1))
+
+tf_network_name: ((tf_network_name))
+
+tf_target_pool_http: ((tf_target_pool_http))
+tf_target_pool_ssh: ((tf_target_pool_ssh))
+tf_target_pool_tcp: ((tf_target_pool_tcp))
+tf_target_pool_websocket: ((tf_target_pool_websocket))

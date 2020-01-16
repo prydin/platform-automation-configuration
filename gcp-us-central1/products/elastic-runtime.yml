@@ -3,7 +3,7 @@ product-properties:
   .cloud_controller.allow_app_ssh_access:
     value: true
   .cloud_controller.apps_domain:
-    value: apps.us-central1.tfsti.gcp.dashaun.cloud
+    value: apps.((environment_name)).((iaas)).dashaun.cloud
   .cloud_controller.default_app_memory:
     value: 1024
   .cloud_controller.default_app_ssh_access:
@@ -30,7 +30,7 @@ product-properties:
   .cloud_controller.staging_timeout_in_seconds:
     value: 900
   .cloud_controller.system_domain:
-    value: sys.us-central1.tfsti.gcp.dashaun.cloud
+    value: sys.((environment_name)).((iaas)).dashaun.cloud
   .diego_brain.starting_container_count_maximum:
     value: 200
   .ha_proxy.skip_cert_verify:
@@ -46,7 +46,7 @@ product-properties:
   .mysql_monitor.poll_frequency:
     value: 30
   .mysql_monitor.recipient_email:
-    value: dacarter@pivotal.io
+    value: ((email))
   .mysql_monitor.write_read_delay:
     value: 20
   .mysql_proxy.enable_inactive_mysql_port:
@@ -357,12 +357,12 @@ product-properties:
       secret: ((uaa_service_provider_key_password.secret))
 network-properties:
   network:
-    name: us-central1-network
+    name: ((tf_network_name))
   other_availability_zones:
-    - name: us-central1-b
-    - name: us-central1-a
+    - name: ((tf_availability_zones_0))
+    - name: ((tf_availability_zones_1))
   singleton_availability_zone:
-    name: us-central1-b
+    name: ((tf_availability_zones_0))
 resource-config:
   backup_restore:
     max_in_flight: 1
@@ -403,7 +403,7 @@ resource-config:
     additional_networks: []
     additional_vm_extensions: []
     elb_names:
-      - tcp:us-central1-ssh-lb
+      - tcp:((tf_target_pool_ssh))
     instance_type:
       id: automatic
     instances: automatic
@@ -476,8 +476,8 @@ resource-config:
     additional_networks: []
     additional_vm_extensions: []
     elb_names:
-      - tcp:us-central1-websocket-lb
-      - http:us-central1-http-lb
+      - tcp:((tf_target_pool_websocket))
+      - http:((tf_target_pool_http))
     instance_type:
       id: automatic
     instances: automatic
@@ -488,7 +488,7 @@ resource-config:
     additional_networks: []
     additional_vm_extensions: []
     elb_names:
-      - tcp:us-central1-tcp-lb
+      - tcp:((tf_target_pool_tcp))
     instance_type:
       id: automatic
     instances: 0
