@@ -40,7 +40,7 @@ tf_availability_zones_1: ((tf_availability_zones_1))
 
 tf_network_name: ((tf_network_name))
 
-tf_target_pool_http: ((tf_target_pool_http))
+tf_target_pool_http: ((tf_backend_service_http))
 tf_target_pool_ssh: ((tf_target_pool_ssh))
 tf_target_pool_tcp: ((tf_target_pool_tcp))
 tf_target_pool_websocket: ((tf_target_pool_websocket))
