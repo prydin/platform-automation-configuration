@@ -11,8 +11,8 @@ properties_credhub_key_encryption_passwords_0_key:
   secret: ((properties_credhub_key_encryption_passwords_0_key))
 
 properties_networking_poe_ssl_certs_0_certificate:
-  cert_pem: ((properties_networking_poe_ssl_certs_0_certificate.certificate))
-  private_key_pem: ((properties_networking_poe_ssl_certs_0_certificate.private_key))
+  cert_pem: ((acme_cert.certificate))
+  private_key_pem: ((acme_cert.private_key))
 
 uaa_service_provider_key_password:
   secret: ((uaa_service_provider_key_password))
@@ -32,8 +32,8 @@ properties_credhub_internal_provider_keys_0_key:
 properties_nfs_volume_driver_enable_ldap_service_account_password:
   secret: ""
 uaa_service_provider_key_credentials:
-  cert_pem: ((properties_networking_poe_ssl_certs_0_certificate.certificate))
-  private_key_pem: ((properties_networking_poe_ssl_certs_0_certificate.private_key))
+  cert_pem: ((acme_cert.certificate))
+  private_key_pem: ((acme_cert.private_key))
 
 tf_availability_zones_0: ((tf_availability_zones_0))
 tf_availability_zones_1: ((tf_availability_zones_1))
