@@ -31,6 +31,12 @@ products:
     pivnet-api-token: ((pivnet_token))
     pivnet-file-glob: "light-bosh-stemcell-*-google-kvm-ubuntu-xenial-go_agent.tgz"
 
+  ksm:
+    product-version: "0.5.1"
+    pivnet-product-slug: container-service-manager
+    pivnet-api-token: ((pivnet_token))
+    pivnet-file-glob: "*.pivotal"
+
   redis-enterprise:
     product-version: 5.4.40700169
     pivnet-product-slug: redis-enterprise-pack
