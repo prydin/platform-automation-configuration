@@ -476,8 +476,8 @@ resource-config:
     additional_networks: []
     additional_vm_extensions: []
     elb_names:
-      - tcp:((tf_tcp_target_pool_name))
-      - http:((tf_web_target_pool_name))
+      - tcp:((tf_web_target_pool_name))
+      - http:((tf_http_backend_service_name))
     instance_type:
       id: automatic
     instances: automatic
