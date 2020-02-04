@@ -6,9 +6,9 @@ gcp:
   project: ((project))
   region: ((tf_region))
   zone: ((tf_availability_zones_0))
-  vm_name: gcp-tinderbox-ops-manager
-  vpc_subnet: ((tf_subnet_pas_name))
-  tags: gcp-tinderbox                   # make sure firewall allow 443/22 for network tag of "ops-manager"
+  vm_name: ((tf_environment_name))-ops-manager
+  vpc_subnet: ((tf_pas_subnet_name))
+  tags: ((tf_environment_name))                   # make sure firewall allow 443/22 for network tag of "ops-manager"
   custom_cpu: 4                         # default:  8
   custom_memory: 16                     # default: 16
   boot_disk_size: 100                   # default: 400
