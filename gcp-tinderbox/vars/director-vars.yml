@@ -1,5 +1,5 @@
 ---
-# OpsManager 2.8.0
+# OpsManager 2.8.2
 # iaas-configuration:
 
 iaas-configurations_0_auth_json: ((gcp_credentials_json))

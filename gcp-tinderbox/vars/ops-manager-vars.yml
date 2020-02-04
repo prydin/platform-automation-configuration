@@ -1,5 +1,5 @@
-
 ---
+# OpsManager 2.8.2
 
 gcp:
   gcp_service_account: ((gcp_credentials_json))
