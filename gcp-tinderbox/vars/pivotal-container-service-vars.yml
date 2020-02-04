@@ -17,6 +17,8 @@ tf_availability_zones_1: ((tf_availability_zones_1))
 
 tf_network_name: ((tf_network_name))
 
+tf_pks_api_dns_domain: ((tf_pks_api_dns_domain))
+
 tf_pks_master_node_service_account_id: ((tf_pks_master_node_service_account_id))
 tf_pks_worker_node_service_account_id: ((tf_pks_worker_node_service_account_id))
 
