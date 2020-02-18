@@ -1,0 +1,27 @@
+environment_name: ((environment_name))
+
+iaas: ((iaas))
+
+pivotal-container-service_pks_tls:
+  cert_pem: ((acme_cert.certificate))
+  private_key_pem: ((acme_cert.private_key))
+
+project: ((project))
+
+properties_cloud_provider_vsphere_vcenter_master_creds:
+  identity: ""
+  password: ""
+
+tf_availability_zones_0: ((tf_availability_zones_0))
+tf_availability_zones_1: ((tf_availability_zones_1))
+
+tf_network_name: ((tf_network_name))
+
+tf_pks_api_dns_domain: ((tf_pks_api_dns_domain))
+
+tf_pks_master_node_service_account_id: ((tf_pks_master_node_service_account_id))
+tf_pks_worker_node_service_account_id: ((tf_pks_worker_node_service_account_id))
+
+tf_pks_subnet_name: ((tf_pks_subnet_name))
+
+tf_pks_api_target_pool_name: ((tf_pks_api_target_pool_name))

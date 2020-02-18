@@ -1,0 +1,49 @@
+---
+cloud_controller_encrypt_key:
+  secret: ((cloud_controller_encrypt_key))
+
+email: ((email))
+environment_name: ((environment_name))
+
+iaas: ((iaas))
+
+properties_credhub_key_encryption_passwords_0_key:
+  secret: ((properties_credhub_key_encryption_passwords_0_key))
+
+properties_networking_poe_ssl_certs_0_certificate:
+  cert_pem: ((acme_cert.certificate))
+  private_key_pem: ((acme_cert.private_key))
+
+uaa_service_provider_key_password:
+  secret: ((uaa_service_provider_key_password))
+
+properties_smtp_credentials:
+  identity: apikey
+  password: ((smtp_credentials.password))
+
+properties_credhub_hsm_provider_client_certificate:
+  cert_pem: ""
+  private_key_pem: ""
+properties_credhub_hsm_provider_partition_password:
+  secret: ""
+properties_credhub_internal_provider_keys_0_key:
+  secret: ((properties_credhub_key_encryption_passwords_0_key))
+
+properties_nfs_volume_driver_enable_ldap_service_account_password:
+  secret: ""
+uaa_service_provider_key_credentials:
+  cert_pem: ((acme_cert.certificate))
+  private_key_pem: ((acme_cert.private_key))
+
+tf_apps_dns_domain: ((tf_apps_dns_domain))
+tf_sys_dns_domain: ((tf_sys_dns_domain))
+
+tf_availability_zones_0: ((tf_availability_zones_0))
+tf_availability_zones_1: ((tf_availability_zones_1))
+
+tf_network_name: ((tf_network_name))
+
+tf_http_backend_service_name: ((tf_http_backend_service_name))
+tf_ssh_target_pool_name: ((tf_ssh_target_pool_name))
+tf_tcp_target_pool_name: ((tf_tcp_target_pool_name))
+tf_web_target_pool_name: ((tf_web_target_pool_name))

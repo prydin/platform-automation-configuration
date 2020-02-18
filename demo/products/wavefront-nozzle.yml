@@ -1,0 +1,83 @@
+product-name: wavefront-nozzle
+product-properties:
+  .properties.advanced_config:
+    selected_option: normal
+    value: "no"
+  .properties.allow_paid_service_plans:
+    value: false
+  .properties.apply_open_security_group:
+    value: false
+  .properties.cf_quota_name:
+    value: default
+  .properties.custom_config_selector:
+    selected_option: default
+    value: Default
+  .properties.custom_tag_foundation:
+    value: us-central1-gcp
+  .properties.friendly_hostname:
+    value: us-central1-pcf-proxy
+  .properties.org:
+    value: wavefront-nozzle-org
+  .properties.pcf_host:
+    value: api.sys.us-central1.gcp.dashaun.cloud
+  .properties.pcf_password:
+    value:
+      secret: ((properties_wavefront_user.password))
+  .properties.pcf_skip_ssl_validation:
+    value: true
+  .properties.pcf_user:
+    value: admin
+  .properties.space:
+    value: wavefront-apps-space
+  .properties.wavefront_service_broker_enable_global_access_to_plans:
+    value: true
+  .properties.wavefront_token:
+    value: ((properties_wavefront_token))
+  .properties.wavefront_url:
+    value: https://surf.wavefront.com/api
+network-properties:
+  network:
+    name: us-central1-services-subnet
+  other_availability_zones:
+  - name: us-central1-c
+  - name: us-central1-b
+  - name: us-central1-a
+  singleton_availability_zone:
+    name: us-central1-a
+resource-config:
+  delete-all:
+    max_in_flight: 1
+    additional_networks: []
+    additional_vm_extensions: []
+    elb_names: []
+    instance_type:
+      id: automatic
+    instances: automatic
+    internet_connected: true
+    swap_as_percent_of_memory_size: automatic
+  deploy-all:
+    max_in_flight: 1
+    additional_networks: []
+    additional_vm_extensions: []
+    elb_names: []
+    instance_type:
+      id: automatic
+    instances: automatic
+    internet_connected: true
+    swap_as_percent_of_memory_size: automatic
+  wavefront_proxy:
+    max_in_flight: 1
+    additional_networks: []
+    additional_vm_extensions: []
+    elb_names: []
+    instance_type:
+      id: automatic
+    instances: automatic
+    internet_connected: true
+    swap_as_percent_of_memory_size: automatic
+errand-config:
+  delete-all:
+    pre-delete-state: true
+  deploy-all:
+    post-deploy-state: true
+

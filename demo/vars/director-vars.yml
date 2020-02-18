@@ -1,0 +1,26 @@
+---
+# OpsManager 2.8.2
+# iaas-configuration:
+
+iaas-configurations_0_auth_json: ((gcp_credentials_json))
+iaas-configurations_0_associated_service_account: "" #((service_account_key)) #terraform
+iaas-configurations_0_default_deployment_tag: ((tf_environment_name))
+iaas-configurations_0_name: ((tf_environment_name))
+iaas-configurations_0_project: ((project))
+properties-configuration_security_configuration_generate_vm_passwords: true
+
+tf_availability_zones_0: ((tf_availability_zones_0))
+tf_availability_zones_1: ((tf_availability_zones_1))
+tf_network_name: ((tf_network_name))
+tf_management_subnet_cidr: ((tf_management_subnet_cidr))
+tf_management_subnet_gateway: ((tf_management_subnet_gateway))
+tf_management_subnet_name: ((tf_management_subnet_name))
+tf_pas_subnet_cidr: ((tf_pas_subnet_cidr))
+tf_pas_subnet_gateway: ((tf_pas_subnet_gateway))
+tf_pas_subnet_name: ((tf_pas_subnet_name))
+tf_pks_subnet_cidr: ((tf_pks_subnet_cidr))
+tf_pks_subnet_gateway: ((tf_pks_subnet_gateway))
+tf_pks_subnet_name: ((tf_pks_subnet_name))
+tf_services_subnet_cidr: ((tf_services_subnet_cidr))
+tf_services_subnet_gateway: ((tf_services_subnet_gateway))
+tf_services_subnet_name: ((tf_services_subnet_name))

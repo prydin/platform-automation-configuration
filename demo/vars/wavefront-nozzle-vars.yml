@@ -1,0 +1,4 @@
+---
+properties_wavefront_token: ((wavefront-token))
+properties_wavefront_user:
+  password: ((wavefront-user.password))
