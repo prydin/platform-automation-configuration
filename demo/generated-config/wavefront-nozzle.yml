@@ -1,0 +1,65 @@
+product-name: wavefront-nozzle
+product-properties:
+  .properties.advanced_config:
+    selected_option: normal
+    value: "no"
+  .properties.allow_paid_service_plans:
+    value: false
+  .properties.apply_open_security_group:
+    value: false
+  .properties.custom_config_selector:
+    selected_option: default
+    value: Default
+  .properties.org:
+    value: wavefront-nozzle-org
+  .properties.pcf_password:
+    value:
+      secret: ((properties_pcf_password.secret))
+  .properties.pcf_skip_ssl_validation:
+    value: false
+  .properties.space:
+    value: wavefront-apps-space
+  .properties.wavefront_service_broker_enable_global_access_to_plans:
+    value: true
+network-properties:
+  network:
+    name: demo-network
+  other_availability_zones: []
+  singleton_availability_zone: null
+resource-config:
+  delete-all:
+    max_in_flight: 1
+    additional_networks: []
+    additional_vm_extensions: []
+    elb_names: []
+    instance_type:
+      id: automatic
+    instances: automatic
+    internet_connected: true
+    swap_as_percent_of_memory_size: automatic
+  deploy-all:
+    max_in_flight: 1
+    additional_networks: []
+    additional_vm_extensions: []
+    elb_names: []
+    instance_type:
+      id: automatic
+    instances: automatic
+    internet_connected: true
+    swap_as_percent_of_memory_size: automatic
+  wavefront_proxy:
+    max_in_flight: 1
+    additional_networks: []
+    additional_vm_extensions: []
+    elb_names: []
+    instance_type:
+      id: automatic
+    instances: automatic
+    internet_connected: true
+    swap_as_percent_of_memory_size: automatic
+errand-config:
+  delete-all:
+    pre-delete-state: true
+  deploy-all:
+    post-deploy-state: true
+
