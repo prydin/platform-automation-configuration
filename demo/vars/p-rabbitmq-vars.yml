@@ -1,0 +1,4 @@
+tf_availability_zones_0: ((tf_availability_zones_0))
+tf_availability_zones_1: ((tf_availability_zones_1))
+tf_network_name: ((tf_network_name))
+tf_tcp_dns: ((tf_tcp_dns))
