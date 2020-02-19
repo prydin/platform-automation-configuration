@@ -46,10 +46,22 @@ products:
   p-mysql:
     product-version: 2.7.5
     pivnet-product-slug: p-mysql
-    pivnet-api-token: ((pivnet_toke))
+    pivnet-api-token: ((pivnet_token))
     pivnet-file-glob: "p-mysql-*.pivotal"
   p-mysql-stemcell:
     product-version: "315.169"
+    pivnet-product-slug: stemcells-ubuntu-xenial
+    pivnet-api-token: ((pivnet_token))
+    pivnet-file-glob: "light-bosh-stemcell-*-google-kvm-ubuntu-xenial-go_agent.tgz"
+
+
+  p-rabbitmq:
+    product-version: 1.18.3
+    pivnet-product-slug: p-rabbitmq
+    pivnet-api-token: ((pivnet_token))
+    pivnet-file-glob: "p-rabbitmq-*.pivotal"
+  p-rabbitmq-stemcell:
+    product-version: "621.57"
     pivnet-product-slug: stemcells-ubuntu-xenial
     pivnet-api-token: ((pivnet_token))
     pivnet-file-glob: "light-bosh-stemcell-*-google-kvm-ubuntu-xenial-go_agent.tgz"
