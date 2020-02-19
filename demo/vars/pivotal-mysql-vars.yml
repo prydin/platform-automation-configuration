@@ -1,0 +1,13 @@
+email: ((email))
+
+properties_backups_selector_gcs_service_account_json:
+  secret:
+
+tf_availability_zones_0: ((tf_availability_zones_0))
+tf_availability_zones_1: ((tf_availability_zones_1))
+
+tf_backup_bucket_name: ((tf_backup_bucket_name))
+
+tf_network_name: ((tf_network_name))
+
+tf_project: ((tf_project))
