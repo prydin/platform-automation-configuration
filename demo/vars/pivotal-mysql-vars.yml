@@ -1,7 +1,7 @@
 email: ((email))
 
 properties_backups_selector_gcs_service_account_json:
-  secret:
+  secret: ((gcp_credentials_json))
 
 tf_availability_zones_0: ((tf_availability_zones_0))
 tf_availability_zones_1: ((tf_availability_zones_1))
