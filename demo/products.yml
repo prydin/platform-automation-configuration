@@ -43,12 +43,12 @@ products:
     pivnet-api-token: ((pivnet_token))
     pivnet-file-glob: "light-bosh-stemcell-*-google-kvm-ubuntu-xenial-go_agent.tgz"
 
-  p-mysql:
+  pivotal-mysql:
     product-version: 2.7.5
-    pivnet-product-slug: p-mysql
+    pivnet-product-slug: pivotal-mysql
     pivnet-api-token: ((pivnet_token))
-    pivnet-file-glob: "p-mysql-*.pivotal"
-  p-mysql-stemcell:
+    pivnet-file-glob: "pivotal-mysql-*.pivotal"
+  pivotal-mysql-stemcell:
     product-version: "315.169"
     pivnet-product-slug: stemcells-ubuntu-xenial
     pivnet-api-token: ((pivnet_token))
