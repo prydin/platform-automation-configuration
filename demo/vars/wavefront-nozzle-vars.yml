@@ -1,4 +1,9 @@
 ---
+environment_name: ((environment_name))
 properties_wavefront_token: ((wavefront-token))
 properties_wavefront_user:
   password: ((wavefront-user.password))
+tf_availability_zones_0: ((tf_availability_zones_0))
+tf_availability_zones_1: ((tf_availability_zones_1))
+tf_network_name: ((tf_network_name))
+tf_sys_dns_domain:  ((tf_sys_dns_domain))
