@@ -7,8 +7,8 @@ product-properties:
   .on-demand-broker.max_in_flight:
     value: 3
   .properties.enable_tls_selector:
-    selected_option: enforced
-    value: enforced
+    selected_option: disabled
+    value: disabled
   .properties.global_settings_force_cluster_shutdown_on_version_change:
     value: false
   .properties.global_settings_plugins:
