@@ -19,8 +19,11 @@ product-properties:
 network-properties:
   network:
     name: demo-network
-  other_availability_zones: []
-  singleton_availability_zone: null
+  other_availability_zones:
+  - name: us-central1-b
+  - name: us-central1-a
+  singleton_availability_zone:
+    name: us-central1-a
 resource-config:
   spring-cloud-services:
     max_in_flight: 1
