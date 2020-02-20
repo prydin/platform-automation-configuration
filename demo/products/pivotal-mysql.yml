@@ -142,13 +142,13 @@ resource-config:
     swap_as_percent_of_memory_size: automatic
 errand-config:
   delete-all-service-instances-and-deregister-broker:
-    pre-delete-state: false
+    pre-delete-state: true
   register-broker:
-    post-deploy-state: false
+    post-deploy-state: true
   smoke-tests:
-    post-deploy-state: false
+    post-deploy-state: true
   upgrade-all-service-instances:
-    post-deploy-state: false
+    post-deploy-state: true
   validate-before-upgrade-instances:
-    post-deploy-state: false
+    post-deploy-state: true
 
