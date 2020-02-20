@@ -1,5 +1,5 @@
 ---
-# wavefront-nozzle 1.1.4 & 2.0.0
+# wavefront-nozzle 2.0.0
 
 product-name: wavefront-nozzle
 product-properties:
@@ -23,6 +23,8 @@ product-properties:
     value: wavefront-nozzle-org
   .properties.pcf_host:
     value: api.((tf_sys_dns_domain))
+  .properties.pcf_log_stream:
+    value: https://log-stream.((tf_sys_dns_domain))
   .properties.pcf_password:
     value:
       secret: ((properties_wavefront_user.password))
