@@ -29,8 +29,8 @@ product-properties:
   .properties.enable_secure_binding_credentials:
     value: true
   .properties.enable_tls_selector:
-    selected_option: required
-    value: required
+    selected_option: disabled
+    value: disabled
   .properties.global_recipient_email:
     value: ((email))
   .properties.global_service_instance_limit:
