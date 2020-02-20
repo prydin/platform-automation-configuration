@@ -20,8 +20,11 @@ uaa_service_provider_key_password:
   secret: ((uaa_service_provider_key_password))
 
 properties_smtp_credentials:
-  identity: apikey
-  password: ((smtp_credentials.password))
+  identity: ((sendgrid-api.username))
+  password: ((sendgrid-api.password))
+
+sendgrid-dns: ((sendgrid-dns))
+sendgrid-port: ((sendgrid-port))
 
 properties_credhub_hsm_provider_client_certificate:
   cert_pem: ""
