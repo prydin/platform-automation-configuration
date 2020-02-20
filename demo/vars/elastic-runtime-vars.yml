@@ -1,4 +1,6 @@
 ---
+# elastic-runtime 2.8.3
+
 cloud_controller_encrypt_key:
   secret: ((cloud_controller_encrypt_key))
 
