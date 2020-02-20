@@ -20,13 +20,15 @@ product-properties:
     value: wavefront-nozzle-org
   .properties.pcf_host:
     value: api.sys.demo.gcp.dashaun.cloud
+  .properties.pcf_log_stream:
+    value: https://log-stream.sys.demo.gcp.dashaun.cloud
   .properties.pcf_password:
     value:
       secret: ((properties_pcf_password.secret))
   .properties.pcf_skip_ssl_validation:
     value: false
   .properties.pcf_user:
-    value: admin
+    value: wavefront-nozzle
   .properties.space:
     value: wavefront-apps-space
   .properties.wavefront_service_broker_enable_global_access_to_plans:
