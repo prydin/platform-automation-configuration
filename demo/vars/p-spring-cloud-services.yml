@@ -1,0 +1,7 @@
+---
+# p_spring-cloud-services 3.1.5
+
+tf_availability_zones_0: ((tf_availability_zones_0))
+tf_availability_zones_1: ((tf_availability_zones_1))
+
+tf_network_name: ((tf_network_name))
