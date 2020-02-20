@@ -11,19 +11,9 @@ product-properties:
     value: disabled
   .properties.global_settings_force_cluster_shutdown_on_version_change:
     value: false
-  .properties.global_settings_plugins:
-    value:
-    - rabbitmq_event_exchange
-    - rabbitmq_mqtt
-    - rabbitmq_stomp
-    - rabbitmq_amqp1_0
   .properties.global_settings_secure_bindings:
-    selected_option: enabled
-    value: "Yes"
-  .properties.global_settings_service_gateway_port_range:
-    value: 25020-25040
-  .properties.global_settings_service_gateway_tcp_router_domain:
-    value: tcp.demo.gcp.dashaun.cloud
+    selected_option: disabled
+    value: "No"
   .properties.global_settings_shareable_instances:
     selected_option: disabled
     value: "No"
@@ -37,8 +27,7 @@ product-properties:
   .properties.on_demand_broker_plan_1_description:
     value: This plan provides a single dedicated RabbitMQ node
   .properties.on_demand_broker_plan_1_disk_limit_acknowledgement:
-    value:
-    - acknowledge
+    value: non-existant-value
   .properties.on_demand_broker_plan_1_features:
     value: RabbitMQ
   .properties.on_demand_broker_plan_1_instance_quota:
@@ -47,10 +36,6 @@ product-properties:
     value: single-node
   .properties.on_demand_broker_plan_1_paid:
     value: false
-  .properties.on_demand_broker_plan_1_rabbitmq_az_placement:
-    value:
-    - us-central1-a
-    - us-central1-b
   .properties.on_demand_broker_plan_1_rabbitmq_cluster_partition_handling_strategy:
     value: pause_minority
   .properties.on_demand_broker_plan_1_rabbitmq_number_of_nodes:
@@ -70,18 +55,18 @@ product-properties:
     selected_option: disabled
     value: disabled
   .properties.syslog_selector:
-    selected_option: disabled
-    value: disabled
+    selected_option: enabled
+    value: enabled
+  .properties.syslog_selector.enabled.syslog_tls:
+    value: false
+  .properties.syslog_selector.enabled.syslog_transport:
+    value: tcp
 network-properties:
   network:
     name: demo-network
-  other_availability_zones:
-  - name: us-central1-b
-  - name: us-central1-a
-  service_network:
-    name: demo-network
-  singleton_availability_zone:
-    name: us-central1-a
+  other_availability_zones: []
+  service_network: null
+  singleton_availability_zone: null
 resource-config:
   on-demand-broker:
     max_in_flight: 1
