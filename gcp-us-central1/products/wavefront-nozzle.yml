@@ -26,7 +26,7 @@ product-properties:
   .properties.pcf_skip_ssl_validation:
     value: true
   .properties.pcf_user:
-    value: admin
+    value: ((properties_wavefront_user.username))
   .properties.space:
     value: wavefront-apps-space
   .properties.wavefront_service_broker_enable_global_access_to_plans:
