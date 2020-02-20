@@ -9,13 +9,13 @@ products:
 
   # PAS
   pas:
-    product-version: "2.8.2"
+    product-version: "2.8.3"
     pivnet-product-slug: elastic-runtime
     pivnet-api-token: ((pivnet_token))
     pivnet-file-glob: "srt-*.pivotal"            # For full fledged PAS, use "cf-*.pivotal"
     stemcell-iaas: google                        # 1) uncomment it if one desires the latest applicable stemcell for the product, or
   pas-stemcell:                                  # 2) use this session to specify exact stemcell you want
-    product-version: "621.41"                    # applicable stemcell range: 315.93–315.99
+    product-version: "621.57"                    # applicable stemcell range: 315.93–315.99
     pivnet-product-slug: stemcells-ubuntu-xenial
     pivnet-api-token: ((pivnet_token))
     pivnet-file-glob: "light-bosh-stemcell-*-google-kvm-ubuntu-xenial-go_agent.tgz"
@@ -32,13 +32,13 @@ products:
     pivnet-file-glob: "light-bosh-stemcell-*-google-kvm-ubuntu-xenial-go_agent.tgz"
 
   wavefront-nozzle:
-    product-version: 1.1.4
+    product-version: 2.0.0
     pivnet-product-slug: wavefront-nozzle
     pivnet-api-token: ((pivnet_token))
     pivnet-file-glob: "wavefront-nozzle-*.pivotal"
     stemcell-iaas: google
   wavefront-nozzle-stemcell:
-    product-version: "250.159"
+    product-version: "250.183"
     pivnet-product-slug: stemcells-ubuntu-xenial
     pivnet-api-token: ((pivnet_token))
     pivnet-file-glob: "light-bosh-stemcell-*-google-kvm-ubuntu-xenial-go_agent.tgz"
@@ -54,7 +54,6 @@ products:
     pivnet-api-token: ((pivnet_token))
     pivnet-file-glob: "light-bosh-stemcell-*-google-kvm-ubuntu-xenial-go_agent.tgz"
 
-
   p-rabbitmq:
     product-version: 1.18.3
     pivnet-product-slug: p-rabbitmq
@@ -62,6 +61,17 @@ products:
     pivnet-file-glob: "p-rabbitmq-*.pivotal"
   p-rabbitmq-stemcell:
     product-version: "621.57"
+    pivnet-product-slug: stemcells-ubuntu-xenial
+    pivnet-api-token: ((pivnet_token))
+    pivnet-file-glob: "light-bosh-stemcell-*-google-kvm-ubuntu-xenial-go_agent.tgz"
+
+  p-spring-cloud-services:
+    product-version: 3.1.5
+    pivnet-product-slug: p-spring-cloud-services
+    pivnet-api-token: ((pivnet_token))
+    pivnet-file-glob: "p_spring-cloud-services-*.pivotal"
+  p-spring-cloud-services-stemcell:
+    product-version: "315.169"
     pivnet-product-slug: stemcells-ubuntu-xenial
     pivnet-api-token: ((pivnet_token))
     pivnet-file-glob: "light-bosh-stemcell-*-google-kvm-ubuntu-xenial-go_agent.tgz"
