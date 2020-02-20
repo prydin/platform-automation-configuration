@@ -81,7 +81,7 @@ resource-config:
     swap_as_percent_of_memory_size: automatic
 errand-config:
   delete-all:
-    pre-delete-state: true
+    pre-delete-state: false
   deploy-all:
-    post-deploy-state: true
+    post-deploy-state: false
 

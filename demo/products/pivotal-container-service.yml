@@ -199,13 +199,13 @@ resource-config:
     swap_as_percent_of_memory_size: automatic
 errand-config:
   delete-all-clusters:
-    pre-delete-state: true
+    pre-delete-state: false
   pks-nsx-t-precheck:
     post-deploy-state: false
   smoke-tests:
     post-deploy-state: false
   upgrade-all-service-instances:
-    post-deploy-state: true
+    post-deploy-state: false
   wavefront-alert-creation:
     post-deploy-state: false
   wavefront-alert-deletion:

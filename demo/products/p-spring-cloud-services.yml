@@ -42,9 +42,9 @@ resource-config:
     swap_as_percent_of_memory_size: automatic
 errand-config:
   destroy-brokers:
-    pre-delete-state: true
+    pre-delete-state: false
   register-brokers:
-    post-deploy-state: true
+    post-deploy-state: false
 syslog-properties:
   address: null
   custom_rsyslog_configuration: null
