@@ -1,4 +1,6 @@
 ---
+# wavefront-nozzle 1.1.4 & 2.0.0
+
 environment_name: ((environment_name))
 properties_wavefront_token: ((wavefront-token))
 properties_wavefront_user:
