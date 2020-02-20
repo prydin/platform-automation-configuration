@@ -8,7 +8,7 @@ product-properties:
     selected_option: gcs
     value: GCS
   .properties.backups_selector.gcs.bucket_name:
-    value: backups-mysql-demo-gcp-dashaun-cloud
+    value: pa-dacarter-demo-backup-90076
   .properties.backups_selector.gcs.cron_schedule:
     value: 0 */8 * * *
   .properties.backups_selector.gcs.enable_email_alerts:
@@ -29,8 +29,8 @@ product-properties:
   .properties.enable_secure_binding_credentials:
     value: true
   .properties.enable_tls_selector:
-    selected_option: required
-    value: required
+    selected_option: disabled
+    value: disabled
   .properties.global_recipient_email:
     value: dacarter@vmware.com
   .properties.global_service_instance_limit:
@@ -123,8 +123,8 @@ network-properties:
   network:
     name: demo-network
   other_availability_zones:
-  - name: us-central1-b
   - name: us-central1-a
+  - name: us-central1-b
   service_network:
     name: demo-network
   singleton_availability_zone:
