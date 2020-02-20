@@ -2,6 +2,7 @@
 environment_name: ((environment_name))
 properties_wavefront_token: ((wavefront-token))
 properties_wavefront_user:
+  username: ((wavefront-user.username))
   password: ((wavefront-user.password))
 tf_availability_zones_0: ((tf_availability_zones_0))
 tf_availability_zones_1: ((tf_availability_zones_1))
