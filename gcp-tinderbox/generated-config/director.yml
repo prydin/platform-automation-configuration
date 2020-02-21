@@ -1,58 +1,13 @@
-az-configuration:
-- name: us-central1-b
-  iaas_configuration_name: gcp-tinderbox
-  guid: 9d65af3b68192019fc12
-- name: us-central1-a
-  iaas_configuration_name: gcp-tinderbox
-  guid: 7d46b98909832b2776de
+az-configuration: []
 iaas-configurations:
 - additional_cloud_properties: {}
   default_deployment_tag: ((iaas-configurations_0_default_deployment_tag))
   name: ((iaas-configurations_0_name))
-  project: ((iaas-configurations_0_project))
 network-assignment:
-  network:
-    name: gcp-tinderbox-network
   other_availability_zones: []
-  singleton_availability_zone:
-    name: us-central1-a
 networks-configuration:
   icmp_checks_enabled: false
-  networks:
-  - name: gcp-tinderbox-network
-    subnets:
-    - iaas_identifier: gcp-tinderbox-network/gcp-tinderbox-management-subnet/us-central1/
-      cidr: 10.0.0.0/26
-      dns: 169.254.169.254, 8.8.8.8
-      gateway: 10.0.0.1
-      reserved_ip_ranges: 10.0.0.1-10.0.0.9
-      availability_zone_names:
-      - us-central1-a
-      - us-central1-b
-    - iaas_identifier: gcp-tinderbox-network/gcp-tinderbox-pas-subnet/us-central1/
-      cidr: 10.0.4.0/24
-      dns: 169.254.169.254, 8.8.8.8
-      gateway: 10.0.4.1
-      reserved_ip_ranges: 10.0.4.1-10.0.4.9
-      availability_zone_names:
-      - us-central1-a
-      - us-central1-b
-    - iaas_identifier: gcp-tinderbox-network/gcp-tinderbox-pks-subnet/us-central1/
-      cidr: 10.0.10.0/24
-      dns: 169.254.169.254, 8.8.8.8
-      gateway: 10.0.10.1
-      reserved_ip_ranges: 10.0.10.1-10.0.10.9
-      availability_zone_names:
-      - us-central1-a
-      - us-central1-b
-    - iaas_identifier: gcp-tinderbox-network/gcp-tinderbox-services-subnet/us-central1/
-      cidr: 10.0.8.0/24
-      dns: 169.254.169.254, 8.8.8.8
-      gateway: 10.0.8.1
-      reserved_ip_ranges: 10.0.8.1-10.0.8.9
-      availability_zone_names:
-      - us-central1-a
-      - us-central1-b
+  networks: []
 properties-configuration:
   director_configuration:
     blobstore_type: local
@@ -72,7 +27,7 @@ properties-configuration:
     keep_unreachable_vms: false
     local_blobstore_options:
       enable_signed_urls: false
-    ntp_servers_string: metadata.google.internal
+    ntp_servers_string: ""
     post_deploy_enabled: false
     resurrector_enabled: false
     retry_bosh_deploys: false
