@@ -12,15 +12,15 @@ vsphere:
     folder: ((vcenter_folder))                # /<Data Center Name>/vm/<Folder>
     insecure: 1                               # default: 0 (secure); 1 (insecure)
   disk_type: thin                            # example: thin|thick
-  private_ip: ((private_ip))
-  dns: (())
+  private_ip: ((opsman_private_ip))
+  dns: ((homelab_dns))
   ntp: pool.ntp.org                    # example: ntp.ubuntu.com
-  ssh_password: ((ssh_password))
-  ssh_public_key: ""                          # for OpsManager >= 2.3
-  hostname: opsmanager.homelab1.dashaun.cloud
+  ssh_password: ""
+  ssh_public_key: ((homelab_ssh_pub))
+  hostname: ((opsman_hostname))
   network: ((homelab_network))              # vcenter network to deploy to
   netmask: ((homelab_netmask))
   gateway: ((homelab_gateway))
-  vm_name: ops-manager-homelab1               # default: Ops_Manager
+  vm_name: ((opsman_vm_name))               # default: Ops_Manager
   memory: 8                                   # default: 8 GB
   cpu: 2                                      # default: 2
