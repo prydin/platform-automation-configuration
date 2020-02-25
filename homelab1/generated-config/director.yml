@@ -1,20 +1,44 @@
-az-configuration: []
+az-configuration:
+- name: homelab1-az1
+  iaas_configuration_name: default
+  clusters:
+  - cluster: cluster1
+    guid: a42b199f32507de7f363
+    host_group: null
+    resource_pool: null
+  guid: e147912d04dc16acd4da
 iaas-configurations:
 - additional_cloud_properties: {}
   bosh_disk_path: ((iaas-configurations_0_bosh_disk_path))
   bosh_template_folder: ((iaas-configurations_0_bosh_template_folder))
   bosh_vm_folder: ((iaas-configurations_0_bosh_vm_folder))
+  datacenter: ((iaas-configurations_0_datacenter))
   disk_type: ((iaas-configurations_0_disk_type))
   ephemeral_datastores_string: ((iaas-configurations_0_ephemeral_datastores_string))
   name: ((iaas-configurations_0_name))
   nsx_networking_enabled: ((iaas-configurations_0_nsx_networking_enabled))
   persistent_datastores_string: ((iaas-configurations_0_persistent_datastores_string))
   ssl_verification_enabled: ((iaas-configurations_0_ssl_verification_enabled))
+  vcenter_host: ((iaas-configurations_0_vcenter_host))
+  vcenter_username: ((iaas-configurations_0_vcenter_username))
 network-assignment:
+  network:
+    name: homelab1-network
   other_availability_zones: []
+  singleton_availability_zone:
+    name: homelab1-az1
 networks-configuration:
   icmp_checks_enabled: true
-  networks: []
+  networks:
+  - name: homelab1-network
+    subnets:
+    - iaas_identifier: VM Network
+      cidr: 10.14.8.64/26
+      dns: 10.14.9.53
+      gateway: 10.14.8.1
+      reserved_ip_ranges: ""
+      availability_zone_names:
+      - homelab1-az1
 properties-configuration:
   director_configuration:
     blobstore_type: local
@@ -34,7 +58,7 @@ properties-configuration:
     keep_unreachable_vms: false
     local_blobstore_options:
       enable_signed_urls: false
-    ntp_servers_string: ""
+    ntp_servers_string: pool.ntp.org
     post_deploy_enabled: false
     resurrector_enabled: false
     retry_bosh_deploys: false
