@@ -61,12 +61,19 @@ properties-configuration:
       enable_signed_urls: false
     ntp_servers_string: pool.ntp.org
     post_deploy_enabled: true
-    resurrector_enabled: false
+    resurrector_enabled: true
     retry_bosh_deploys: false
     skip_director_drain: true
   dns_configuration:
     excluded_recursors: []
-    handlers: []
+    handlers:
+    - cache:
+        enabled: true
+      domain: homelab1.vsphere.dashaun.cloud
+      source:
+        recursors:
+        - 10.14.9.53
+        type: dns
   security_configuration:
     generate_vm_passwords: ((properties-configuration_security_configuration_generate_vm_passwords))
     opsmanager_root_ca_trusted_certs: true
