@@ -13,3 +13,7 @@ properties_cloud_provider_vsphere_vcenter_master_creds:
   password: ((vcenter_user.password))
 
 minio_endpoint: ((minio_endpoint))
+
+vcenter_dc: ((vcenter_dc))
+vcenter_ds: ((vcenter_ds)
+vcenter_host: ((vcenter_host))
