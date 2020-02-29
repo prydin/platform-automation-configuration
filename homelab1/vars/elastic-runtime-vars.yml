@@ -7,6 +7,8 @@ environment_name: ((environment_name))
 
 iaas: ((iaas))
 
+minio_endpoint: ((minio_endpoint))
+
 properties_credhub_key_encryption_passwords_0_key:
   secret: ((properties_credhub_key_encryption_passwords_0_key))
 
@@ -31,6 +33,10 @@ properties_credhub_internal_provider_keys_0_key:
 
 properties_nfs_volume_driver_enable_ldap_service_account_password:
   secret: ""
+
+properties_system_blobstore_external_secret_key:
+  secret: ((minio_secret_key))
+
 uaa_service_provider_key_credentials:
   cert_pem: ((acme_cert.certificate))
   private_key_pem: ((acme_cert.private_key))

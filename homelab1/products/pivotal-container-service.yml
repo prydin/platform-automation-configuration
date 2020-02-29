@@ -59,7 +59,7 @@ product-properties:
     selected_option: disabled
     value: disabled
   .properties.pks_api_hostname:
-    value: pks.((env_name)).((iaas)).dashaun.cloud
+    value: pks.((environment_name)).((iaas)).dashaun.cloud
   .properties.plan1_selector:
     selected_option: active
     value: Plan Active
