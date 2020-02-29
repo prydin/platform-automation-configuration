@@ -7,3 +7,25 @@ products:
     pivnet-product-slug: ops-manager
     pivnet-api-token: ((pivnet_token))
     pivnet-file-glob: "ops-manager-vsphere-*.ova"
+
+  pas:
+    product-version: "2.8.3"
+    pivnet-product-slug: elastic-runtime
+    pivnet-api-token: ((pivnet_token))
+    pivnet-file-glob: "cf-*.pivotal"             # For full fledged PAS, use "cf-*.pivotal"
+  pas-stemcell:                                  # 2) use this session to specify exact stemcell you want
+    product-version: "621.57"                    # applicable stemcell range: 315.93–315.99
+    pivnet-product-slug: stemcells-ubuntu-xenial
+    pivnet-api-token: ((pivnet_token))
+    pivnet-file-glob: "bosh-stemcell-*-vsphere-esxi-ubuntu-xenial-go_agent.tgz"
+
+  pks:
+    product-version: "1.6.1"
+    pivnet-product-slug: pivotal-container-service
+    pivnet-api-token: ((pivnet_token))
+    pivnet-file-glob: "*.pivotal"
+    pks-stemcell:
+      product-version: "456.51"
+      pivnet-product-slug: stemcells-ubuntu-xenial
+      pivnet-api-token: ((pivnet_token))
+      pivnet-file-glob: "bosh-stemcell-*-vsphere-esxi-ubuntu-xenial-go_agent.tgz"
