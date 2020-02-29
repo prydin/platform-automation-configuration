@@ -45,7 +45,7 @@ properties-configuration:
     bosh_recreate_on_next_deploy: false
     bosh_recreate_persistent_disks_on_next_deploy: false
     database_type: internal
-#    director_hostname: director.((environment_name)).((iaas)).dashaun.cloud
+    director_hostname: director.((environment_name)).((iaas)).dashaun.cloud
     director_worker_count: 5
     encryption:
       keys: []
@@ -64,11 +64,16 @@ properties-configuration:
     resurrector_enabled: true
     retry_bosh_deploys: false
     skip_director_drain: true
-    local_dns:
-      enabled: true
   dns_configuration:
     excluded_recursors: []
-    handlers: []
+    handlers:
+    - cache:
+        enabled: true
+      domain: homelab1.vsphere.dashaun.cloud
+      source:
+        recursors:
+        - 10.14.9.53
+        type: dns
   security_configuration:
     generate_vm_passwords: ((properties-configuration_security_configuration_generate_vm_passwords))
     opsmanager_root_ca_trusted_certs: true
