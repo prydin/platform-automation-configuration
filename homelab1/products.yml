@@ -24,8 +24,8 @@ products:
     pivnet-product-slug: pivotal-container-service
     pivnet-api-token: ((pivnet_token))
     pivnet-file-glob: "*.pivotal"
-    pks-stemcell:
-      product-version: "456.51"
-      pivnet-product-slug: stemcells-ubuntu-xenial
-      pivnet-api-token: ((pivnet_token))
-      pivnet-file-glob: "bosh-stemcell-*-vsphere-esxi-ubuntu-xenial-go_agent.tgz"
+  pks-stemcell:
+    product-version: "456.51"
+    pivnet-product-slug: stemcells-ubuntu-xenial
+    pivnet-api-token: ((pivnet_token))
+    pivnet-file-glob: "bosh-stemcell-*-vsphere-esxi-ubuntu-xenial-go_agent.tgz"
