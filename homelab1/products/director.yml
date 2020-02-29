@@ -45,6 +45,7 @@ properties-configuration:
     bosh_recreate_on_next_deploy: false
     bosh_recreate_persistent_disks_on_next_deploy: false
     database_type: internal
+    director_hostname: director.((environment_name)).((iaas)).dashaun.cloud
     director_worker_count: 5
     encryption:
       keys: []
