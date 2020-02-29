@@ -28,15 +28,15 @@ network-assignment:
   singleton_availability_zone:
     name: homelab1-az1
 networks-configuration:
-  icmp_checks_enabled: true
+  icmp_checks_enabled: false
   networks:
   - name: homelab1-network
     subnets:
     - iaas_identifier: VM Network
-      cidr: 10.14.8.64/26
+      cidr: 10.14.8.0/23
       dns: 10.14.9.53
       gateway: 10.14.8.1
-      reserved_ip_ranges: ""
+      reserved_ip_ranges: 10.14.8.1-10.14.8.64,10.14.8.95-10.14.8.255,10.14.9.1-10.14.9.255
       availability_zone_names:
       - homelab1-az1
 properties-configuration:
@@ -59,16 +59,16 @@ properties-configuration:
     local_blobstore_options:
       enable_signed_urls: false
     ntp_servers_string: pool.ntp.org
-    post_deploy_enabled: false
+    post_deploy_enabled: true
     resurrector_enabled: false
     retry_bosh_deploys: false
-    skip_director_drain: false
+    skip_director_drain: true
   dns_configuration:
     excluded_recursors: []
     handlers: []
   security_configuration:
     generate_vm_passwords: ((properties-configuration_security_configuration_generate_vm_passwords))
-    opsmanager_root_ca_trusted_certs: false
+    opsmanager_root_ca_trusted_certs: true
   syslog_configuration:
     enabled: false
 resource-configuration:
