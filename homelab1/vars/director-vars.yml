@@ -1,6 +1,8 @@
 ---
 # OpsManager 2.8.3 - vsphere
 
+environment_name: ((environment_name))
+
 iaas-configurations_0_bosh_disk_path: pcf_disk
 iaas-configurations_0_bosh_template_folder: pcf_templates
 iaas-configurations_0_bosh_vm_folder: pcf_vms
