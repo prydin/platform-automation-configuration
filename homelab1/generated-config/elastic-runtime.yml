@@ -2,6 +2,8 @@ product-name: cf
 product-properties:
   .cloud_controller.allow_app_ssh_access:
     value: true
+  .cloud_controller.apps_domain:
+    value: apps.homelab1.vsphere.dashaun.cloud
   .cloud_controller.default_app_memory:
     value: 1024
   .cloud_controller.default_app_ssh_access:
@@ -9,7 +11,7 @@ product-properties:
   .cloud_controller.default_disk_quota_app:
     value: 1024
   .cloud_controller.default_quota_max_number_services:
-    value: 100
+    value: 10
   .cloud_controller.default_quota_memory_limit_mb:
     value: 10240
   .cloud_controller.enable_custom_buildpacks:
@@ -27,6 +29,8 @@ product-properties:
     value: true
   .cloud_controller.staging_timeout_in_seconds:
     value: 900
+  .cloud_controller.system_domain:
+    value: sys.homelab1.vsphere.dashaun.cloud
   .diego_brain.starting_container_count_maximum:
     value: 200
   .ha_proxy.skip_cert_verify:
@@ -41,6 +45,8 @@ product-properties:
     value: false
   .mysql_monitor.poll_frequency:
     value: 30
+  .mysql_monitor.recipient_email:
+    value: dacarter@vmware.com
   .mysql_monitor.write_read_delay:
     value: 20
   .mysql_proxy.enable_inactive_mysql_port:
@@ -77,7 +83,7 @@ product-properties:
   .properties.cf_networking_database_connection_timeout:
     value: 120
   .properties.cf_networking_enable_space_developer_self_service:
-    value: false
+    value: true
   .properties.cf_networking_internal_domains:
     value:
     - name: apps.internal
@@ -115,6 +121,12 @@ product-properties:
   .properties.credhub_hsm_provider_partition_password:
     value:
       secret: ((properties_credhub_hsm_provider_partition_password.secret))
+  .properties.credhub_internal_provider_keys:
+    value:
+    - key:
+        secret: ((properties_credhub_internal_provider_keys_0_key.secret))
+      name: default
+      primary: true
   .properties.diego_database_max_open_connections:
     value: 100
   .properties.diego_log_timestamp_format:
@@ -135,18 +147,16 @@ product-properties:
   .properties.experimental_dynamic_egress_enforcement:
     value: false
   .properties.garden_disk_cleanup:
-    selected_option: reserved
-    value: reserved
-  .properties.garden_disk_cleanup.reserved.reserved_space_for_other_jobs_in_mb:
-    value: 15360
+    selected_option: routine
+    value: routine
   .properties.gorouter_ssl_ciphers:
     value: ECDHE-RSA-AES128-GCM-SHA256:TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
   .properties.haproxy_client_cert_validation:
     selected_option: none
     value: none
   .properties.haproxy_forward_tls:
-    selected_option: enable
-    value: enable
+    selected_option: disable
+    value: disable
   .properties.haproxy_hsts_support:
     selected_option: disable
     value: disable
@@ -168,28 +178,33 @@ product-properties:
   .properties.metric_registrar_scrape_interval_in_seconds:
     value: 35
   .properties.mysql_activity_logging:
-    selected_option: enable
-    value: enable
-  .properties.mysql_activity_logging.enable.audit_logging_events:
-    value: connect,query
+    selected_option: disable
+    value: disable
+  .properties.networking_poe_ssl_certs:
+    value:
+    - certificate:
+        cert_pem: ((properties_networking_poe_ssl_certs_0_certificate.cert_pem))
+        private_key_pem: ((properties_networking_poe_ssl_certs_0_certificate.private_key_pem))
+      name: default
   .properties.networkpolicyserver_database_max_open_connections:
     value: 200
   .properties.networkpolicyserverinternal_database_max_open_connections:
     value: 200
   .properties.nfs_volume_driver:
-    selected_option: enable
-    value: enable
-  .properties.nfs_volume_driver.enable.ldap_service_account_password:
-    value:
-      secret: ((properties_nfs_volume_driver_enable_ldap_service_account_password.secret))
+    selected_option: disable
+    value: disable
   .properties.push_apps_manager_app_poll_interval:
     value: 10
+  .properties.push_apps_manager_company_name:
+    value: homelab1-vsphere-dashaun-cloud
   .properties.push_apps_manager_currency_lookup:
     value: '{ "usd": "$", "eur": "€" }'
   .properties.push_apps_manager_display_plan_prices:
     value: false
   .properties.push_apps_manager_enable_invitations:
     value: true
+  .properties.push_apps_manager_footer_text:
+    value: homelab1-vsphere-dashaun-cloud
   .properties.push_apps_manager_nav_links:
     value:
     - href: https://docs.pivotal.io/pivotalcf/2-8/pas/intro.html
@@ -232,17 +247,21 @@ product-properties:
     selected_option: tls_v1_2
     value: tls_v1_2
   .properties.routing_tls_termination:
-    selected_option: load_balancer
-    value: load_balancer
+    selected_option: router
+    value: router
   .properties.saml_signature_algorithm:
     value: SHA256
   .properties.secure_service_instance_credentials:
-    value: false
+    value: true
+  .properties.security_acknowledgement:
+    value: X
   .properties.silk_database_max_open_connections:
     value: 200
   .properties.smoke_tests:
     selected_option: on_demand
     value: on_demand
+  .properties.smtp_address:
+    value: smtp.sendgrid.net
   .properties.smtp_auth_mechanism:
     value: plain
   .properties.smtp_credentials:
@@ -250,7 +269,11 @@ product-properties:
       identity: ((properties_smtp_credentials.identity))
       password: ((properties_smtp_credentials.password))
   .properties.smtp_enable_starttls_auto:
-    value: false
+    value: true
+  .properties.smtp_from:
+    value: dacarter@vmware.com
+  .properties.smtp_port:
+    value: 465
   .properties.syslog_drop_debug:
     value: true
   .properties.syslog_tls:
@@ -259,11 +282,34 @@ product-properties:
   .properties.syslog_use_tcp_for_file_forwarding_local_transport:
     value: false
   .properties.system_blobstore:
-    selected_option: internal
-    value: internal
+    selected_option: external
+    value: external
+  .properties.system_blobstore.external.access_key:
+    value: minioadmin
+  .properties.system_blobstore.external.buildpacks_bucket:
+    value: homelab1-buildpacks
+  .properties.system_blobstore.external.droplets_bucket:
+    value: homelab1-droplets
+  .properties.system_blobstore.external.encryption:
+    value: false
+  .properties.system_blobstore.external.endpoint:
+    value: http://10.14.9.10:9000
+  .properties.system_blobstore.external.iam_instance_profile_authentication:
+    value: false
+  .properties.system_blobstore.external.packages_bucket:
+    value: homelab1-packages
+  .properties.system_blobstore.external.resources_bucket:
+    value: homelab1-resources
+  .properties.system_blobstore.external.secret_key:
+    value:
+      secret: ((properties_system_blobstore_external_secret_key.secret))
+  .properties.system_blobstore.external.signature_version:
+    value: "2"
+  .properties.system_blobstore.external.versioning:
+    value: false
   .properties.system_blobstore_backup_level:
-    selected_option: all
-    value: all
+    selected_option: skip_droplets_packages
+    value: skip_droplets_packages
   .properties.system_blobstore_ccdroplet_max_staged_droplets_stored:
     value: 2
   .properties.system_blobstore_ccpackage_max_valid_packages_stored:
@@ -627,7 +673,7 @@ resource-config:
     additional_vm_extensions: []
     instance_type:
       id: automatic
-    instances: automatic
+    instances: 0
     nsx:
       lbs: []
       security_groups: []
