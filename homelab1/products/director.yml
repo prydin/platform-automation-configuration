@@ -5,7 +5,7 @@ az-configuration:
       - cluster: cluster1
         guid: a42b199f32507de7f363
         host_group: null
-        resource_pool: null
+        resource_pool: homelab1
     guid: e147912d04dc16acd4da
 iaas-configurations:
   - additional_cloud_properties: {}
@@ -33,10 +33,10 @@ networks-configuration:
     - name: homelab1-network
       subnets:
         - iaas_identifier: VM Network
-          cidr: 10.14.8.0/23
-          dns: 10.14.9.53
-          gateway: 10.14.8.1
-          reserved_ip_ranges: 10.14.8.1-10.14.8.64,10.14.8.95-10.14.8.255,10.14.9.1-10.14.9.255
+          cidr: 10.1.0.0/24
+          dns: 10.1.0.1
+          gateway: 10.1.0.1
+          reserved_ip_ranges: 10.1.0.1-10.1.0.10
           availability_zone_names:
             - homelab1-az1
 properties-configuration:
@@ -72,7 +72,7 @@ properties-configuration:
       domain: homelab1.vsphere.dashaun.cloud
       source:
         recursors:
-        - 10.14.9.53
+        - 10.1.0.1
         type: dns
   security_configuration:
     generate_vm_passwords: ((properties-configuration_security_configuration_generate_vm_passwords))
