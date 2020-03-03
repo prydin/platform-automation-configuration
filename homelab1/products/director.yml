@@ -28,7 +28,7 @@ network-assignment:
   singleton_availability_zone:
     name: homelab1-az1
 networks-configuration:
-  icmp_checks_enabled: false
+  icmp_checks_enabled: true
   networks:
     - name: homelab1-network
       subnets:
