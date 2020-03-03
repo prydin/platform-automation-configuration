@@ -3,10 +3,8 @@ az-configuration:
     iaas_configuration_name: default
     clusters:
       - cluster: cluster1
-        guid: a42b199f32507de7f363
         host_group: null
         resource_pool: homelab1
-    guid: e147912d04dc16acd4da
 iaas-configurations:
   - additional_cloud_properties: {}
     bosh_disk_path: ((iaas-configurations_0_bosh_disk_path))
