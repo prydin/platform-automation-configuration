@@ -16,6 +16,7 @@ iaas-configurations_0_nsx_networking_enabled: false
 iaas-configurations_0_persistent_datastores_string: disk1
 iaas-configurations_0_ssl_verification_enabled: false
 iaas-configurations_0_vcenter_host: ((vcenter_host))
-iaas-configurations_0_vcenter_username: ((vcenter_user))
+iaas-configurations_0_vcenter_username: ((vcenter_user.username))
+iaas-configurations_0_vcenter_password: ((vcenter_user.password))
 
 properties-configuration_security_configuration_generate_vm_passwords: true
