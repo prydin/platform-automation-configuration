@@ -209,7 +209,7 @@ errand-config:
   upgrade-all-service-instances:
     post-deploy-state: true
   wavefront-alert-creation:
-    post-deploy-state: true
+    post-deploy-state: false
   wavefront-alert-deletion:
-    pre-delete-state: true
+    pre-delete-state: false
 
