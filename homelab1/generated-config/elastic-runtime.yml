@@ -36,7 +36,7 @@ product-properties:
   .diego_brain.static_ips:
     value: 10.1.0.240,10.1.0.241,10.1.0.242
   .ha_proxy.skip_cert_verify:
-    value: false
+    value: true
   .mysql.cli_history:
     value: false
   .mysql.max_connections:
