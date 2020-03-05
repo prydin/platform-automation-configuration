@@ -34,7 +34,7 @@ product-properties:
   .diego_brain.starting_container_count_maximum:
     value: 200
   .diego_brain.static_ips:
-    value: 10.1.0.6
+    value: 10.1.0.240,10.1.0.241,10.1.0.242
   .ha_proxy.skip_cert_verify:
     value: false
   .mysql.cli_history:
@@ -369,9 +369,9 @@ product-properties:
   .router.request_timeout_in_seconds:
     value: 900
   .router.static_ips:
-    value: 10.1.0.7
+    value: 10.1.0.250,10.1.0.251,10.1.0.252
   .tcp_router.static_ips:
-    value: 10.1.0.5
+    value: 10.1.0.230
   .uaa.apps_manager_access_token_lifetime:
     value: 3600
   .uaa.cf_cli_access_token_lifetime:
