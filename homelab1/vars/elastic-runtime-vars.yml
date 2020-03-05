@@ -37,6 +37,8 @@ properties_nfs_volume_driver_enable_ldap_service_account_password:
 properties_system_blobstore_external_secret_key:
   secret: ((minio_secret_key))
 
+smtp_address: ((sendgrid-dns))
+
 uaa_service_provider_key_credentials:
   cert_pem: ((acme_cert.certificate))
   private_key_pem: ((acme_cert.private_key))

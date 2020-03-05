@@ -261,7 +261,7 @@ product-properties:
     selected_option: on_demand
     value: on_demand
   .properties.smtp_address:
-    value: smtp.sendgrid.net
+    value: ((smtp_address))
   .properties.smtp_auth_mechanism:
     value: plain
   .properties.smtp_credentials:
