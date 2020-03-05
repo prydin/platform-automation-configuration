@@ -33,6 +33,8 @@ product-properties:
     value: sys.((environment_name)).((iaas)).dashaun.cloud
   .diego_brain.starting_container_count_maximum:
     value: 200
+  .diego_brain.static_ips:
+    value: 10.1.0.6
   .ha_proxy.skip_cert_verify:
     value: false
   .mysql.cli_history:
@@ -182,10 +184,10 @@ product-properties:
     value: disable
   .properties.networking_poe_ssl_certs:
     value:
-      - certificate:
-          cert_pem: ((properties_networking_poe_ssl_certs_0_certificate.cert_pem))
-          private_key_pem: ((properties_networking_poe_ssl_certs_0_certificate.private_key_pem))
-        name: wildcard
+    - certificate:
+        cert_pem: ((properties_networking_poe_ssl_certs_0_certificate.cert_pem))
+        private_key_pem: ((properties_networking_poe_ssl_certs_0_certificate.private_key_pem))
+      name: wildcard
   .properties.networkpolicyserver_database_max_open_connections:
     value: 200
   .properties.networkpolicyserverinternal_database_max_open_connections:
@@ -239,7 +241,7 @@ product-properties:
     selected_option: enable
     value: enable
   .properties.routing_disable_http:
-    value: false
+    value: true
   .properties.routing_log_client_ips:
     selected_option: log_client_ips
     value: log_client_ips
@@ -318,8 +320,12 @@ product-properties:
     selected_option: internal_pxc
     value: internal_pxc
   .properties.tcp_routing:
-    selected_option: disable
-    value: disable
+    selected_option: enable
+    value: enable
+  .properties.tcp_routing.enable.request_timeout_in_seconds:
+    value: 300
+  .properties.tcp_routing.enable.reservable_ports:
+    value: 9900-9999
   .properties.uaa:
     selected_option: internal
     value: internal
@@ -362,6 +368,10 @@ product-properties:
     value: 20
   .router.request_timeout_in_seconds:
     value: 900
+  .router.static_ips:
+    value: 10.1.0.7
+  .tcp_router.static_ips:
+    value: 10.1.0.5
   .uaa.apps_manager_access_token_lifetime:
     value: 3600
   .uaa.cf_cli_access_token_lifetime:
@@ -723,7 +733,7 @@ resource-config:
     additional_vm_extensions: []
     instance_type:
       id: automatic
-    instances: 0
+    instances: automatic
     nsx:
       lbs: []
       security_groups: []
