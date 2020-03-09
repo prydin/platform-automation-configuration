@@ -2,8 +2,6 @@ product-name: cf
 product-properties:
   .cloud_controller.allow_app_ssh_access:
     value: true
-  .cloud_controller.apps_domain:
-    value: apps.gcp-tinderbox.gcp.dashaun.cloud
   .cloud_controller.default_app_memory:
     value: 1024
   .cloud_controller.default_app_ssh_access:
@@ -29,14 +27,12 @@ product-properties:
     value: true
   .cloud_controller.staging_timeout_in_seconds:
     value: 900
-  .cloud_controller.system_domain:
-    value: sys.gcp-tinderbox.gcp.dashaun.cloud
   .diego_brain.starting_container_count_maximum:
     value: 200
   .ha_proxy.skip_cert_verify:
     value: false
   .mysql.cli_history:
-    value: false
+    value: true
   .mysql.max_connections:
     value: 3500
   .mysql.prevent_node_auto_rejoin:
@@ -45,8 +41,6 @@ product-properties:
     value: false
   .mysql_monitor.poll_frequency:
     value: 30
-  .mysql_monitor.recipient_email:
-    value: dacarter@vmware.com
   .mysql_monitor.write_read_delay:
     value: 20
   .mysql_proxy.enable_inactive_mysql_port:
@@ -121,12 +115,6 @@ product-properties:
   .properties.credhub_hsm_provider_partition_password:
     value:
       secret: ((properties_credhub_hsm_provider_partition_password.secret))
-  .properties.credhub_internal_provider_keys:
-    value:
-    - key:
-        secret: ((properties_credhub_internal_provider_keys_0_key.secret))
-      name: intenalkey_name
-      primary: true
   .properties.diego_database_max_open_connections:
     value: 100
   .properties.diego_log_timestamp_format:
@@ -157,8 +145,8 @@ product-properties:
     selected_option: none
     value: none
   .properties.haproxy_forward_tls:
-    selected_option: disable
-    value: disable
+    selected_option: enable
+    value: enable
   .properties.haproxy_hsts_support:
     selected_option: disable
     value: disable
@@ -184,12 +172,6 @@ product-properties:
     value: enable
   .properties.mysql_activity_logging.enable.audit_logging_events:
     value: connect,query
-  .properties.networking_poe_ssl_certs:
-    value:
-    - certificate:
-        cert_pem: ((properties_networking_poe_ssl_certs_0_certificate.cert_pem))
-        private_key_pem: ((properties_networking_poe_ssl_certs_0_certificate.private_key_pem))
-      name: wildcard
   .properties.networkpolicyserver_database_max_open_connections:
     value: 200
   .properties.networkpolicyserverinternal_database_max_open_connections:
@@ -250,14 +232,12 @@ product-properties:
     selected_option: tls_v1_2
     value: tls_v1_2
   .properties.routing_tls_termination:
-    selected_option: router
-    value: router
+    selected_option: load_balancer
+    value: load_balancer
   .properties.saml_signature_algorithm:
     value: SHA256
   .properties.secure_service_instance_credentials:
-    value: true
-  .properties.security_acknowledgement:
-    value: X
+    value: false
   .properties.silk_database_max_open_connections:
     value: 200
   .properties.smoke_tests:
@@ -360,11 +340,8 @@ product-properties:
 network-properties:
   network:
     name: gcp-tinderbox-network
-  other_availability_zones:
-  - name: us-central1-a
-  - name: us-central1-b
-  singleton_availability_zone:
-    name: us-central1-a
+  other_availability_zones: []
+  singleton_availability_zone: null
 resource-config:
   backup_restore:
     max_in_flight: 1
@@ -404,8 +381,7 @@ resource-config:
     max_in_flight: 1
     additional_networks: []
     additional_vm_extensions: []
-    elb_names:
-    - tcp:gcp-tinderbox-ssh-lb
+    elb_names: []
     instance_type:
       id: automatic
     instances: automatic
@@ -477,9 +453,7 @@ resource-config:
     max_in_flight: 1
     additional_networks: []
     additional_vm_extensions: []
-    elb_names:
-    - tcp:gcp-tinderbox-websocket-lb
-    - http:gcp-tinderbox-http-lb
+    elb_names: []
     instance_type:
       id: automatic
     instances: automatic
@@ -489,8 +463,7 @@ resource-config:
     max_in_flight: 1
     additional_networks: []
     additional_vm_extensions: []
-    elb_names:
-    - tcp:gcp-tinderbox-tcp-lb
+    elb_names: []
     instance_type:
       id: automatic
     instances: 0
