@@ -1,0 +1,26 @@
+---
+vsphere:
+  vcenter:
+    url: ((vcenter_url))
+    username: ((vcenter_user.username))
+    password: ((vcenter_user.password))
+    datastore: ((vcenter_datastore))
+    ca_cert: ""
+    host: ""                                  # optional, vCenter host to deploy Ops Manager in
+    datacenter: ((vcenter_dc))
+    resource_pool: ((vcenter_rp))   # or /<Data Center Name>/host/<Cluster Name>
+    folder: ((vcenter_folder))                # /<Data Center Name>/vm/<Folder>
+    insecure: 1                               # default: 0 (secure); 1 (insecure)
+  disk_type: thin                            # example: thin|thick
+  private_ip: ((opsman_private_ip))
+  dns: ((homelab_dns))
+  ntp: pool.ntp.org                    # example: ntp.ubuntu.com
+  ssh_password: ""
+  ssh_public_key: ((homelab_ssh_pub))
+  hostname: ((opsman_hostname))
+  network: ((vsphere_network))              # vcenter network to deploy to
+  netmask: ((network_netmask))
+  gateway: ((network_gateway))
+  vm_name: ((opsman_vm_name))               # default: Ops_Manager
+  memory: 8                                   # default: 8 GB
+  cpu: 2                                      # default: 2

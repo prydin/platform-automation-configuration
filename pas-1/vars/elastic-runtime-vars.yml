@@ -1,0 +1,44 @@
+---
+cloud_controller_encrypt_key:
+  secret: ((cloud_controller_encrypt_key))
+
+email: ((email))
+environment_name: ((environment_name))
+
+iaas: ((iaas))
+
+minio_endpoint: ((minio_endpoint))
+
+properties_credhub_key_encryption_passwords_0_key:
+  secret: ((properties_credhub_key_encryption_passwords_0_key))
+
+properties_networking_poe_ssl_certs_0_certificate:
+  cert_pem: ((acme_cert.certificate))
+  private_key_pem: ((acme_cert.private_key))
+
+uaa_service_provider_key_password:
+  secret: ((uaa_service_provider_key_password))
+
+properties_smtp_credentials:
+  identity: ((sendgrid-api.username))
+  password: ((sendgrid-api.password))
+
+properties_credhub_hsm_provider_client_certificate:
+  cert_pem: ""
+  private_key_pem: ""
+properties_credhub_hsm_provider_partition_password:
+  secret: ""
+properties_credhub_internal_provider_keys_0_key:
+  secret: ((properties_credhub_key_encryption_passwords_0_key))
+
+properties_nfs_volume_driver_enable_ldap_service_account_password:
+  secret: ""
+
+properties_system_blobstore_external_secret_key:
+  secret: ((minio_secret_key))
+
+smtp_address: ((sendgrid-dns))
+
+uaa_service_provider_key_credentials:
+  cert_pem: ((acme_cert.certificate))
+  private_key_pem: ((acme_cert.private_key))

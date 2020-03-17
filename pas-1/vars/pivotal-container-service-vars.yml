@@ -1,0 +1,19 @@
+environment_name: ((environment_name))
+
+iaas: ((iaas))
+
+pivotal-container-service_pks_tls:
+  cert_pem: ((acme_cert.certificate))
+  private_key_pem: ((acme_cert.private_key))
+
+project: ((project))
+
+properties_cloud_provider_vsphere_vcenter_master_creds:
+  identity: ((vcenter_user.username))
+  password: ((vcenter_user.password))
+
+minio_endpoint: ((minio_endpoint))
+
+vcenter_dc: ((vcenter_dc))
+vcenter_ds: ((vcenter_ds)
+vcenter_host: ((vcenter_host))

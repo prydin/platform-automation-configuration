@@ -1,0 +1,22 @@
+---
+# OpsManager 2.8.3 - vsphere
+
+environment_name: ((environment_name))
+
+iaas: ((iaas))
+
+iaas-configurations_0_bosh_disk_path: pcf_disk
+iaas-configurations_0_bosh_template_folder: pcf_templates
+iaas-configurations_0_bosh_vm_folder: pcf_vms
+iaas-configurations_0_datacenter: ((vcenter_dc))
+iaas-configurations_0_disk_type: thin
+iaas-configurations_0_ephemeral_datastores_string: disk2
+iaas-configurations_0_name: default
+iaas-configurations_0_nsx_networking_enabled: false
+iaas-configurations_0_persistent_datastores_string: disk1
+iaas-configurations_0_ssl_verification_enabled: false
+iaas-configurations_0_vcenter_host: ((vcenter_host))
+iaas-configurations_0_vcenter_username: ((vcenter_user.username))
+iaas-configurations_0_vcenter_password: ((vcenter_user.password))
+
+properties-configuration_security_configuration_generate_vm_passwords: true
